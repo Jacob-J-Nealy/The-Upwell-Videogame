@@ -8,17 +8,19 @@ public class UserInterface{
 
 
     public void Introduction() {
-        System.out.println("Tip: Press 'ENTER' to continue dialogue throughout game");
-        System.out.println("\n");
+        System.out.println("\nTip: Press 'ENTER' to continue dialogue throughout game");
+        System.out.println();
 
         System.out.print("It's Dark...");
         continueScanner.nextLine();
         System.out.println("\n");
 
 
-        System.out.println("Where am I?");
+        System.out.print("Where am I?");
         continueScanner.nextLine();
         System.out.println("\n");
+
+        System.out.println("--  ");
 
 
 
