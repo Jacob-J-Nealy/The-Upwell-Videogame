@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class UserInterface{
 
-    Scanner continueScanner = new Scanner(System.in);
+    Scanner continueDialogue = new Scanner(System.in);
 
 
     public void Introduction() {
@@ -12,15 +12,15 @@ public class UserInterface{
         System.out.println();
 
         System.out.print("It's Dark...");
-        continueScanner.nextLine();
+        continueDialogue.nextLine();
         System.out.println("\n");
 
 
         System.out.print("Where am I?");
-        continueScanner.nextLine();
+        continueDialogue.nextLine();
         System.out.println("\n");
 
-        System.out.println("--  ");
+        System.out.println(" ");
 
 
 

@@ -6,6 +6,10 @@ public class Application {
 
     public static void main(String[] args) {
 
-        UserInterface ui = new UserInterface()
+        // Created New UI inside of Application
+        UserInterface ui = new UserInterface();
+
+        // Running UI Introduction Method
+        ui.Introduction();
     }
 }
