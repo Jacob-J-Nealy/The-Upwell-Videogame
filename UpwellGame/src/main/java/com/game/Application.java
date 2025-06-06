@@ -11,7 +11,7 @@ public class Application {
         UserInterface ui = new UserInterface();
         Colors colors = new Colors();
 
-        ui.Introduction();
+        ui.introduction();
 
 
     }
