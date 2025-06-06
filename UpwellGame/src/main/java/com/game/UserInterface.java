@@ -6,6 +6,7 @@ public class UserInterface {
 
     Scanner continueDialogue = new Scanner(System.in);
     Colors colors = new Colors();
+    String RESET        = "\u001B[0m";
 
     // Helper Methods
     /**
@@ -13,9 +14,11 @@ public class UserInterface {
      * This Method is used to display In-Game Prompts letter by letter
      * similarly to the game UnderTale.
      */
-    public void gameTextWriter(String text, int delay) {
+    public void gameTextWriter(String text, int delay, String color, String RESET) {
+        System.out.println(color);
+
         for (char c : text.toCharArray()) {
-            System.out.println(c);
+            System.out.print(c);
 
             try {
                 Thread.sleep(delay);
@@ -23,6 +26,7 @@ public class UserInterface {
                 Thread.currentThread().interrupt();
             }
         }
+        System.out.println(RESET);
         System.out.println();
     }
 
@@ -41,21 +45,23 @@ public class UserInterface {
     }
 
     public void introduction() {
-        System.out.println("\nTip: Press 'ENTER' to continue dialogue throughout game");
+        gameTextWriter(
+                "\nTip: Press 'ENTER' to continue dialogue throughout game.",
+                0, Colors.BOLD, Colors.RESET);
         waitForEnter();
 
-        System.out.print("It's Dark...");
+        gameTextWriter("It's Dark...",100);
         waitForEnter();
 
 
-        System.out.print("Where am I?");
+        gameTextWriter("Where am I?",100);
         waitForEnter();
 
-        System.out.print(""" 
+        gameTextWriter("""
                 You wake up lying in a pool of shallow, cold water.
                 Your clothes cling to your body, completely drenched.
                 The air is damp and heavy, and the stench of mildew rises from your soaked shirt.
-                """);
+                """,40);
         waitForEnter();
     }
 

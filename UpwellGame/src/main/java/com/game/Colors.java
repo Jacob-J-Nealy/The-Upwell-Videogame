@@ -14,11 +14,14 @@ public class Colors {
     public static final String GREY         = "\u001B[37m";
     // Bright Colors
     public static final String BRIGHT_BLACK = "\u001B[90m";
-    public static final String BRIGHT_WHITE = "\u001B[97m"; //
+    public static final String BRIGHT_WHITE = "\u001B[97m";
     // Text Styles
     public static final String BOLD         = "\u001B[1m";
     public static final String UNDERLINE    = "\u001B[4m";
     public static final String REVERSED     = "\u001B[7m";
+
+
+
 
 
     // Color & Style Test Method
