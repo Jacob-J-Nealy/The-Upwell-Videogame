@@ -1,15 +1,18 @@
 package com.game;
 
 
+import static com.game.Colors.*;
 
 public class Application {
 
     public static void main(String[] args) {
 
-        // Created New UI inside of Application
+        // Added Classes
         UserInterface ui = new UserInterface();
+        Colors colors = new Colors();
 
-        // Running UI Introduction Method
         ui.Introduction();
+
+
     }
 }

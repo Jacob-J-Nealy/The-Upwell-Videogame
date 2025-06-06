@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class UserInterface{
 
     Scanner continueDialogue = new Scanner(System.in);
+    Colors colors = new Colors();
 
 
     public void Introduction() {
@@ -20,7 +21,9 @@ public class UserInterface{
         continueDialogue.nextLine();
         System.out.println("\n");
 
-        System.out.println(" ");
+        System.out.print("");
+        continueDialogue.nextLine();
+        System.out.println("\n");
 
 
 
