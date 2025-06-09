@@ -13,6 +13,7 @@ public class Application {
 
         colors.colorTest();
         ui.introduction();
+        colors.colorTest();
 
 
     }
