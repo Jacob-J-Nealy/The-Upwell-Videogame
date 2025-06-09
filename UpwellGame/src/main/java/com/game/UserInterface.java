@@ -13,8 +13,8 @@ public class UserInterface {
      * This Method is used to display In-Game Prompts letter by letter
      * similarly to the game UnderTale.
      */
-    public void gameTextWriter(String text, int delay, String color, String RESET) {
-        System.out.println(color);
+    public void gameTextWriter(String text, int delay, String color) {
+        System.out.print(color);
 
         for (char c : text.toCharArray()) {
             System.out.print(c);
@@ -25,7 +25,7 @@ public class UserInterface {
                 Thread.currentThread().interrupt();
             }
         }
-        System.out.println(RESET);
+        System.out.println(Colors.RESET);
         System.out.println();
     }
 
@@ -46,25 +46,28 @@ public class UserInterface {
     public void introduction() {
         gameTextWriter(
                 "\nTip: Press 'ENTER' to continue dialogue throughout game.",
-                20, Colors.BOLD, Colors.RESET);
+                20, Colors.BOLD);
         waitForEnter();
 
         gameTextWriter(
                 "It's Dark...",
-                100, Colors.BRIGHT_WHITE, Colors.RESET);
+                100, Colors.BRIGHT_WHITE);
         waitForEnter();
 
 
-        gameTextWriter("Where am I?",
-                100, Colors.RESET, Colors.RESET);
+        gameTextWriter(
+                "Where am I?",
+                100, Colors.RESET);
         waitForEnter();
 
         gameTextWriter("""
                 You wake up lying in a pool of shallow, cold water.
                 Your clothes cling to your body, completely drenched.
                 The air is damp and heavy, and the stench of mildew rises from your soaked shirt.""",
-                40, Colors.RESET, Colors.RESET);
+                40, Colors.RESET);
         waitForEnter();
+
+        
     }
 
 
