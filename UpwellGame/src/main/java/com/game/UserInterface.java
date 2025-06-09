@@ -6,7 +6,6 @@ public class UserInterface {
 
     Scanner continueDialogue = new Scanner(System.in);
     Colors colors = new Colors();
-    String RESET        = "\u001B[0m";
 
     // Helper Methods
     /**
@@ -47,21 +46,24 @@ public class UserInterface {
     public void introduction() {
         gameTextWriter(
                 "\nTip: Press 'ENTER' to continue dialogue throughout game.",
-                0, Colors.BOLD, Colors.RESET);
+                20, Colors.BOLD, Colors.RESET);
         waitForEnter();
 
-        gameTextWriter("It's Dark...",100);
+        gameTextWriter(
+                "It's Dark...",
+                100, Colors.BRIGHT_WHITE, Colors.RESET);
         waitForEnter();
 
 
-        gameTextWriter("Where am I?",100);
+        gameTextWriter("Where am I?",
+                100, Colors.RESET, Colors.RESET);
         waitForEnter();
 
         gameTextWriter("""
                 You wake up lying in a pool of shallow, cold water.
                 Your clothes cling to your body, completely drenched.
-                The air is damp and heavy, and the stench of mildew rises from your soaked shirt.
-                """,40);
+                The air is damp and heavy, and the stench of mildew rises from your soaked shirt.""",
+                40, Colors.RESET, Colors.RESET);
         waitForEnter();
     }
 
