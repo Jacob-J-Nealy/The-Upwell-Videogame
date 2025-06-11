@@ -9,11 +9,9 @@ public class Application {
 
         // Added Classes
         UserInterface ui = new UserInterface();
-        Colors colors = new Colors();
+        Colors colors    = new Colors();
 
-        colors.colorTest();
         ui.introduction();
-        colors.colorTest();
 
 
     }

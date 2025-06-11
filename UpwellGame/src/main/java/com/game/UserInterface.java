@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-    Scanner continueDialogue = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     Colors colors = new Colors();
 
     // Helper Methods
@@ -37,7 +37,7 @@ public class UserInterface {
     public void waitForEnter() {
 
         while (true) {
-            String input = continueDialogue.nextLine();
+            String input = scanner.nextLine();
 
             if (input.isEmpty()) {
                 System.out.println();
@@ -46,6 +46,22 @@ public class UserInterface {
                 System.err.println("PLEASE PRESS 'ENTER' TO CONTINUE");
             }
         }
+    }
+    public void waitForInput_3choice() {
+
+        while (true) {
+            int input = scanner.nextInt();
+
+            if (input == 1 || input == 2 || input == 3) {
+                System.out.println();
+                break;
+            } else {
+                System.err.println("PLEASE ENTER A VALID OPTION");
+            }
+        }
+    }
+    public void starterWeaponChoice() {
+
     }
 
     public void introduction() {
@@ -94,9 +110,7 @@ public class UserInterface {
                 Colors.BRIGHT_WHITE);
         waitForEnter();
 
-        addColor(
-                "I need to get out of here.",
-                Colors.BRIGHT_WHITE);
+        addColor("I need to get out of here.", Colors.BRIGHT_WHITE);
         waitForEnter();
 
         addColor("""
@@ -125,10 +139,32 @@ public class UserInterface {
         """, Colors.RESET);
         waitForEnter();
 
-        addColor("""
-    What are they... An archer? A swordsman? A thief?
-    """, Colors.BRIGHT_WHITE);
-        waitForEnter();
+        addColor("PLAYER TURN", Colors.BOLD);
+        System.out.println("[1] What is that- An Archer?");
+        System.out.println("[2] Is that a...A Swordsman?");
+        System.out.println("[3] It looks sneaky, is it a Thief?");
+        addColor("Please SELECT a SPEAKING Option by Pressing the Corresponding Key Here ➡ ", Colors.CYAN);
+
+
+        boolean deciding = true;
+        int intWeaponChoice = -1;
+
+        while (deciding) {
+
+            if (scanner.hasNextInt()) {
+                intWeaponChoice = scanner.nextInt();
+                scanner.nextLine(); // scanner eater
+            }
+
+            addColor("\nYou have a Chosen: ", Colors.BOLD);
+
+            switch (intWeaponChoice) {
+                case 1  -> {addColor("Bow & Arrow\n\n",   Colors.PURPLE);   deciding = false; }
+                case 2  -> {addColor("A Giant Sword\n\n", Colors.PURPLE); deciding = false; }
+                case 3  -> {addColor("Twin Daggers\n\n",  Colors.PURPLE);  deciding = false; }
+                default -> addColor("❌ Incorrect Input. Please Try Again: ", Colors.RED);
+            }
+        }
 
         addColor("Suddenly, the scroll bursts into flames!", Colors.RED);
         waitForEnter();
