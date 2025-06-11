@@ -8,16 +8,12 @@ public class UserInterface {
     Colors colors = new Colors();
 
     // Helper Methods
-    /**
-     * gameTextWriter() Explanation
-     * This Method is used to display In-Game Prompts letter by letter
-     * similarly to the game UnderTale.
-     */
-    public void gameTextWriter(String text, int delay, String color) {
+    public void slowTextWriter(String text, int delay, String color) {
         System.out.print(color);
 
         for (char c : text.toCharArray()) {
             System.out.print(c);
+            System.out.flush();
 
             try {
                 Thread.sleep(delay);
@@ -27,6 +23,15 @@ public class UserInterface {
         }
         System.out.println(Colors.RESET);
         System.out.println();
+    }
+
+    /**
+     * addColor() Explanation
+     * This Method is used to display In-Game Prompts with Color
+     */
+    public void addColor(String text, String color) {
+        System.out.print(color + text + Colors.RESET);
+
     }
 
     public void waitForEnter() {
@@ -44,34 +49,96 @@ public class UserInterface {
     }
 
     public void introduction() {
-        gameTextWriter(
+        addColor(
                 "\nTip: Press 'ENTER' to continue dialogue throughout game.",
-                20, Colors.BOLD);
+                Colors.BOLD);
         waitForEnter();
 
-        gameTextWriter(
-                "It's Dark...",
-                100, Colors.BRIGHT_WHITE);
+        addColor(
+                "It's dark...",
+                Colors.BRIGHT_WHITE);
         waitForEnter();
 
-
-        gameTextWriter(
+        addColor(
                 "Where am I?",
-                100, Colors.RESET);
+                Colors.BRIGHT_WHITE);
         waitForEnter();
 
-        gameTextWriter("""
-                You wake up lying in a pool of shallow, cold water.
-                Your clothes cling to your body, completely drenched.
-                The air is damp and heavy, and the stench of mildew rises from your soaked shirt.""",
-                40, Colors.RESET);
+        addColor("""
+        You wake up lying in a pool of shallow, cold water.
+        Your clothes cling to your body, completely drenched.
+        The air is damp and heavy, and the stench of mildew rises from your soaked shirt.
+        """, Colors.RESET);
         waitForEnter();
 
-        
+        addColor(
+                "Was I... unconscious?",
+                Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor("""
+        As your eyes adjust, you take in your surroundings:
+        You’re inside a massive, circular chamber—like the bottom of a well.
+        Ancient bricks stack upward, perfectly uniform, disappearing into darkness.
+        The floor is flooded, water sloshing around your ankles.
+        """, Colors.RESET);
+        waitForEnter();
+
+        addColor(
+                "Then you see it...",
+                Colors.YELLOW);
+        waitForEnter();
+
+        addColor("""
+        Far above you, a faint glow — a light shining from the very top of the well.""",
+                Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor(
+                "I need to get out of here.",
+                Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor("""
+        You look around. Carved bricks extend out from the wall, 
+        staggered like makeshift stairs spiraling toward the light.
+        """, Colors.RESET);
+        waitForEnter();
+
+        addColor("[Press ENTER to approach the stairs...]", Colors.CYAN);
+        waitForEnter();
+
+        addColor("As you walk toward the stairs, something catches your eye...", Colors.RESET);
+        waitForEnter();
+
+        addColor("A weathered scroll lies on the first step.", Colors.YELLOW);
+        waitForEnter();
+
+        addColor("[Press ENTER to pick up the scroll...]", Colors.CYAN);
+        waitForEnter();
+
+        addColor("""
+        Etched in faded ink are three figures:
+        - One holds a bow, steady and focused.
+        - One grips a massive sword, its blade gleaming in the dim light.
+        - One shrouded in a hood, crouched with twin daggers in hand.
+        """, Colors.RESET);
+        waitForEnter();
+
+        addColor("""
+    What are they... An archer? A swordsman? A thief?
+    """, Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor("Suddenly, the scroll bursts into flames!", Colors.RED);
+        waitForEnter();
+
+        addColor("In its place — three weapons lie before you.", Colors.RESET);
+        waitForEnter();
+
+        addColor("[Choose your weapon]", Colors.YELLOW);
+        waitForEnter();
     }
-
-
-
 
 
 }
