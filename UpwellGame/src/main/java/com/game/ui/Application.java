@@ -1,7 +1,5 @@
-package com.game;
+package com.game.ui;
 
-
-import static com.game.Colors.*;
 
 public class Application {
 
