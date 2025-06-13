@@ -183,11 +183,6 @@ public class UserInterface {
         addColor("Suddenly, the scroll bursts into flames!", Colors.RED);
         waitForEnter();
 
-        addColor("In its place — three weapons lie before you.", Colors.RESET);
-        waitForEnter();
-
-        addColor("[Choose your weapon]", Colors.YELLOW);
-        waitForEnter();
     }
 
     public void printGameLogo() {
