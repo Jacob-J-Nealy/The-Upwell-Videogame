@@ -139,7 +139,8 @@ public class UserInterface {
         """, Colors.RESET);
         waitForEnter();
 
-        addColor("PLAYER TURN", Colors.BOLD);
+        addColor("PLAYER TURN (Select Option Below)\n", Colors.BOLD);
+        System.out.println("________________________________");
         System.out.println("[1] What is that- An Archer?");
         System.out.println("[2] Is that a...A Swordsman?");
         System.out.println("[3] It looks sneaky, is it a Thief?");
@@ -154,15 +155,28 @@ public class UserInterface {
             if (scanner.hasNextInt()) {
                 intWeaponChoice = scanner.nextInt();
                 scanner.nextLine(); // scanner eater
-            }
 
-            addColor("\nYou have a Chosen: ", Colors.BOLD);
-
-            switch (intWeaponChoice) {
-                case 1  -> {addColor("Bow & Arrow\n\n",   Colors.PURPLE);   deciding = false; }
-                case 2  -> {addColor("A Giant Sword\n\n", Colors.PURPLE); deciding = false; }
-                case 3  -> {addColor("Twin Daggers\n\n",  Colors.PURPLE);  deciding = false; }
-                default -> addColor("❌ Incorrect Input. Please Try Again: ", Colors.RED);
+                switch (intWeaponChoice) {
+                    case 1 -> {
+                        addColor("\nYou have a Chosen: ", Colors.BOLD);
+                        addColor("Bow & Arrow\n\n", Colors.PURPLE);
+                        deciding = false;
+                    }
+                    case 2 -> {
+                        addColor("\nYou have a Chosen: ", Colors.BOLD);
+                        addColor("A Giant Sword\n\n", Colors.PURPLE);
+                        deciding = false;
+                    }
+                    case 3 -> {
+                        addColor("\nYou have a Chosen: ", Colors.BOLD);
+                        addColor("Twin Daggers\n\n", Colors.PURPLE);
+                        deciding = false;
+                    }
+                    default -> System.err.print("❌ Incorrect Input. Please Try Again: ");
+                }
+            } else {
+                scanner.nextLine(); // scanner eater
+                System.err.print("❌ Invalid input. Please enter a number: ");
             }
         }
 
