@@ -18,7 +18,7 @@ Equipped with a weapon of your choice, you must ascend toward the light — faci
 
 ## 🛠️ Installation & Setup
 
-### 📦 Clone the Repository (Do this in Gitbash
+### 📦 Clone the Repository (Do this in Gitbash)
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/upwell-game.git
