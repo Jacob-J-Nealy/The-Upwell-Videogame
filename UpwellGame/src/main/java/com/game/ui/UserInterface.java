@@ -199,8 +199,68 @@ public class UserInterface {
         addColor("What...What is Happening Right Now?", Colors.BRIGHT_WHITE);
         waitForEnter();
 
-        addColor("[Press ENTER to pick up the " + player.getStarterWeapon() + "]", Colors.CYAN);
+        addColor("Press ENTER to pick up the " + player.getStarterWeapon(), Colors.CYAN);
         waitForEnter();
+
+        addColor("""
+                You grasp the weapon with both hands.
+                It feels... right — as if it was meant for you.
+                """, Colors.RESET);
+        waitForEnter();
+
+        addColor("""
+                Without hesitation, you begin to ascend the makeshift staircase.
+                Your boots splash in shallow puddles as you climb higher and higher...
+                """, Colors.RESET);
+        waitForEnter();
+
+        addColor("The air grows colder.", Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor("""
+            Suddenly, the stairs stop.
+            Built into the brick wall is a wide, open tunnel — carved unnaturally into the side of the well.
+            The stone surrounding it is cracked and darkened... like something burst through it.
+            """, Colors.RESET);
+        waitForEnter();
+
+        addColor("[Press ENTER to step into the tunnel...]", Colors.CYAN);
+        waitForEnter();
+
+        addColor("""
+            You slowly step inside, your weapon ready...
+            
+            """, Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor("It's completely dark... and silent.", Colors.GREY);
+        waitForEnter();
+
+        addColor("Then-", Colors.GREY);
+        waitForEnter();
+
+        addColor("*SCHLOOP!*", Colors.GREEN);
+        waitForEnter();
+
+        addColor("Something wet slaps against the tunnel floor ahead.", Colors.YELLOW);
+        waitForEnter();
+
+        addColor("""
+                It's a SLIME — glowing green, gelatinous, and wobbling aggressively.
+                You can see bones floating inside it... maybe human.
+                It jiggles with fury and lunges toward you!
+                """, Colors.RED);
+        waitForEnter();
+
+        addColor("---‼️ ‼️a GREEN SLIME has appeared ‼️‼️---", Colors.GREEN);
+        waitForEnter();
+
+        addColor("[BATTLE START]", Colors.BOLD);
+        waitForEnter();
+
+
+
+
     }
 
     public void printGameLogo() {
