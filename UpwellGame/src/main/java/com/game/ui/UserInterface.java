@@ -258,6 +258,12 @@ public class UserInterface {
         addColor("[BATTLE START]", Colors.BOLD);
         waitForEnter();
 
+        // 1. Make Weapon Choice Functionality a Method
+        // 2. Make Dialogue After Slime Fight a Method
+        // 3. Plan and Battle Sequence with Words
+        // 4. Plan with Code
+        // 5. Code Battle Sequence Method
+
 
 
 
