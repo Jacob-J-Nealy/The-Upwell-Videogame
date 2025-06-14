@@ -1,5 +1,6 @@
 package com.game.weapons.player;
 
+import com.game.ui.Colors;
 import com.game.weapons.Weapon;
 
 public class Bow extends Weapon {
@@ -8,8 +9,11 @@ public class Bow extends Weapon {
         super(name, attackPower, defensePower);
     }
 
-
-
+    // toString
+    @Override
+    public String toString() {
+        return Colors.PURPLE + "Bow" + Colors.RESET;
+    }
 
     // Player Action Methods
     public void mainAttack() {
