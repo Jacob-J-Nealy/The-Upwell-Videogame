@@ -1,11 +1,18 @@
 package com.game.ui;
 
+import com.game.entity.player.Player;
+import com.game.weapons.Weapon;
+import com.game.weapons.player.Bow;
+import com.game.weapons.player.Sword;
+import com.game.weapons.player.TwinDaggers;
+
 import java.util.Scanner;
 
 public class UserInterface {
 
     Scanner scanner = new Scanner(System.in);
     Colors colors = new Colors();
+    Player player = new Player();
 
     // Helper Methods
     public void slowTextWriter(String text, int delay, String color) {
@@ -160,16 +167,19 @@ public class UserInterface {
                     case 1 -> {
                         addColor("\nYou have a Chosen: ", Colors.BOLD);
                         addColor("Bow & Arrow\n\n", Colors.PURPLE);
+                        player.setStarterWeapon(new Bow("Bow", 15, 15));
                         deciding = false;
                     }
                     case 2 -> {
                         addColor("\nYou have a Chosen: ", Colors.BOLD);
                         addColor("A Giant Sword\n\n", Colors.PURPLE);
+                        player.setStarterWeapon(new Sword("Sword", 10,20));
                         deciding = false;
                     }
                     case 3 -> {
                         addColor("\nYou have a Chosen: ", Colors.BOLD);
                         addColor("Twin Daggers\n\n", Colors.PURPLE);
+                        player.setStarterWeapon(new TwinDaggers("Twin Daggers", 20,10));
                         deciding = false;
                     }
                     default -> System.err.print("❌ Incorrect Input. Please Try Again: ");
@@ -183,6 +193,14 @@ public class UserInterface {
         addColor("Suddenly, the scroll bursts into flames!", Colors.RED);
         waitForEnter();
 
+        addColor("The " + player.getStarterWeapon() + " appears for you to Grab.", Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor("What...What is Happening Right Now?", Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor("[Press ENTER to pick up the " + player.getStarterWeapon() + "]", Colors.CYAN);
+        waitForEnter();
     }
 
     public void printGameLogo() {

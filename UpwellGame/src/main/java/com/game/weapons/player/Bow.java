@@ -9,6 +9,8 @@ public class Bow extends Weapon {
     }
 
 
+
+
     // Player Action Methods
     public void mainAttack() {
 
@@ -22,4 +24,6 @@ public class Bow extends Weapon {
     public void defend() {
 
     }
+
+
 }

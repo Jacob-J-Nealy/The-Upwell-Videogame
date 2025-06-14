@@ -22,6 +22,9 @@ public class Player {
         this.inventory = inventory;
     }
 
+    // Player Constructor (Empty)
+    public Player() {}
+
     // Getters and Setters
 
         // Name
