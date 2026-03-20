@@ -104,7 +104,7 @@ Example of the intro sequence and dialogue system running in the terminal.
 ---
 
 ### 🧩 UML Class Diagram
-![UML Diagram](UpwellGame/images/upwell-uml.png)
+![UML Diagram](UpwellGame/images/upwell-uml.png.png)
 
 The UML diagram showing relationships between the core classes such as `Player`, `Weapon`, `Enemy`, and the game interface.
 
