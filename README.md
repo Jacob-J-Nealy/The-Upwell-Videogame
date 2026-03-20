@@ -93,18 +93,18 @@ The atmosphere and mechanics are loosely inspired by classic games like:
 Here are some visuals from the development of **The Upwell**.
 
 ### 🖥️ Tithe Screen in Terminal
-![Game Screenshot](images/title-screen.png)
+![Game Screenshot](UpwellGame/images/title-screen.png)
 
 ### 🖥️ Game Running in the Terminal
-![Game Screenshot](images/slime-appears.png)
-![IDE Screenshot](images/weapon-selection.png)
+![Game Screenshot](UpwellGame/images/slime-appears.png)
+![IDE Screenshot](UpwellGame/images/weapon-selection.png)
 
 Example of the intro sequence and dialogue system running in the terminal.
 
 ---
 
 ### 🧩 UML Class Diagram
-![UML Diagram](images/upwell-uml.png)
+![UML Diagram](UpwellGame/images/upwell-uml.png)
 
 The UML diagram showing relationships between the core classes such as `Player`, `Weapon`, `Enemy`, and the game interface.
 
