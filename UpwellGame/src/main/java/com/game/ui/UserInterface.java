@@ -5,7 +5,6 @@ import com.game.weapons.Weapon;
 import com.game.weapons.player.Bow;
 import com.game.weapons.player.Sword;
 import com.game.weapons.player.TwinDaggers;
-
 import java.util.Scanner;
 
 public class UserInterface {
