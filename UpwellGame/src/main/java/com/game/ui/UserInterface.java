@@ -7,7 +7,6 @@ import com.game.weapons.player.Sword;
 import com.game.weapons.player.TwinDaggers;
 import java.util.Scanner;
 
-// Test Push
 public class UserInterface {
 
     Scanner scanner = new Scanner(System.in);

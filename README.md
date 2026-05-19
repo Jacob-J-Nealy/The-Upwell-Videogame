@@ -92,14 +92,17 @@ The atmosphere and mechanics are loosely inspired by classic games like:
 
 Here are some visuals from the development of **The Upwell**.
 
-### 🖥️ Tithe Screen in Terminal
-![Game Screenshot](images/title-screen.png)
-
 ### 🖥️ Game Running in the Terminal
-![Game Screenshot](images/slime-appears.png)
-![IDE Screenshot](images/weapon-selection.png)
+![Game Screenshot](images/game-terminal.png)
 
 Example of the intro sequence and dialogue system running in the terminal.
+
+---
+
+### 🧠 Project Structure (IntelliJ IDEA)
+![IDE Screenshot](images/ide-structure.png)
+
+View of the project inside IntelliJ IDEA showing the object-oriented structure of the game.
 
 ---
 
