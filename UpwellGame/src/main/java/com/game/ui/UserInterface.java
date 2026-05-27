@@ -30,7 +30,6 @@ public class UserInterface {
         System.out.println(Colors.RESET);
         System.out.println();
     }
-
     /**
      * addColor() Explanation
      * This Method is used to display In-Game Prompts with Color
@@ -39,7 +38,6 @@ public class UserInterface {
         System.out.print(color + text + Colors.RESET);
 
     }
-
     public void waitForEnter() {
 
         while (true) {
@@ -66,76 +64,7 @@ public class UserInterface {
             }
         }
     }
-    public void starterWeaponChoice() {
-
-    }
-
-    public void introduction() {
-        addColor(
-                "\nTip: Press 'ENTER' to continue dialogue throughout game.",
-                Colors.BOLD);
-        waitForEnter();
-
-        addColor(
-                "It's dark...",
-                Colors.BRIGHT_WHITE);
-        waitForEnter();
-
-        addColor(
-                "Where am I?",
-                Colors.BRIGHT_WHITE);
-        waitForEnter();
-
-        addColor("""
-        You wake up lying in a pool of shallow, cold water.
-        Your clothes cling to your body, completely drenched.
-        The air is damp and heavy, and the stench of mildew rises from your soaked shirt.
-        """, Colors.RESET);
-        waitForEnter();
-
-        addColor(
-                "Was I... unconscious?",
-                Colors.BRIGHT_WHITE);
-        waitForEnter();
-
-        addColor("""
-        As your eyes adjust, you take in your surroundings:
-        You’re inside a massive, circular chamber—like the bottom of a well.
-        Ancient bricks stack upward, perfectly uniform, disappearing into darkness.
-        The floor is flooded, water sloshing around your ankles.
-        """, Colors.RESET);
-        waitForEnter();
-
-        addColor(
-                "Then you see it...",
-                Colors.YELLOW);
-        waitForEnter();
-
-        addColor("""
-        Far above you, a faint glow — a light shining from the very top of the well.""",
-                Colors.BRIGHT_WHITE);
-        waitForEnter();
-
-        addColor("I need to get out of here.", Colors.BRIGHT_WHITE);
-        waitForEnter();
-
-        addColor("""
-        You look around. Carved bricks extend out from the wall, 
-        staggered like makeshift stairs spiraling toward the light.
-        """, Colors.RESET);
-        waitForEnter();
-
-        addColor("[Press ENTER to approach the stairs...]", Colors.CYAN);
-        waitForEnter();
-
-        addColor("As you walk toward the stairs, something catches your eye...", Colors.RESET);
-        waitForEnter();
-
-        addColor("A weathered scroll lies on the first step.", Colors.YELLOW);
-        waitForEnter();
-
-        addColor("[Press ENTER to pick up the scroll...]", Colors.CYAN);
-        waitForEnter();
+    public void scrollInteraction() {
 
         addColor("""
         Etched in faded ink are three figures:
@@ -206,6 +135,77 @@ public class UserInterface {
                 It feels... right — as if it was meant for you.
                 """, Colors.RESET);
         waitForEnter();
+
+    }
+
+    public void introduction() {
+        addColor(
+                "\nTip: Press 'ENTER' to continue dialogue throughout game.",
+                Colors.BOLD);
+        waitForEnter();
+
+        addColor(
+                "It's dark...",
+                Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor(
+                "Where am I?",
+                Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor("""
+        You wake up lying in a pool of shallow, cold water.
+        Your clothes cling to your body, completely drenched.
+        The air is damp and heavy, and the stench of mildew rises from your soaked shirt.
+        """, Colors.RESET);
+        waitForEnter();
+
+        addColor(
+                "Was I... unconscious?",
+                Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor("""
+        As your eyes adjust, you take in your surroundings:
+        You’re inside a massive, circular chamber—like the bottom of a well.
+        Ancient bricks stack upward, perfectly uniform, disappearing into darkness.
+        The floor is flooded, water sloshing around your ankles.
+        """, Colors.RESET);
+        waitForEnter();
+
+        addColor(
+                "Then you see it...",
+                Colors.YELLOW);
+        waitForEnter();
+
+        addColor("""
+        Far above you, a faint glow — a light shining from the very top of the well.""",
+                Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor("I need to get out of here.", Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor("""
+        You look around. Carved bricks extend out from the wall, 
+        staggered like makeshift stairs spiraling toward the light.
+        """, Colors.RESET);
+        waitForEnter();
+
+        addColor("[Press ENTER to approach the stairs...]", Colors.CYAN);
+        waitForEnter();
+
+        addColor("As you walk toward the stairs, something catches your eye...", Colors.RESET);
+        waitForEnter();
+
+        addColor("A weathered scroll lies on the first step.", Colors.YELLOW);
+        waitForEnter();
+
+        addColor("[Press ENTER to pick up the scroll...]", Colors.CYAN);
+        waitForEnter();
+
+        scrollInteraction();
 
         addColor("""
                 Without hesitation, you begin to ascend the makeshift staircase.
