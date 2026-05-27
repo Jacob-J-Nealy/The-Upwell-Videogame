@@ -30,13 +30,14 @@ public class UserInterface {
         System.out.println(Colors.RESET);
         System.out.println();
     }
-    /**
-     * addColor() Explanation
-     * This Method is used to display In-Game Prompts with Color
-     */
     public void addColor(String text, String color) {
-        System.out.print(color + text + Colors.RESET);
 
+        /**
+         * addColor() Explanation
+         * This Method is used to display In-Game Prompts with Color
+         */
+
+        System.out.print(color + text + Colors.RESET);
     }
     public void waitForEnter() {
 
