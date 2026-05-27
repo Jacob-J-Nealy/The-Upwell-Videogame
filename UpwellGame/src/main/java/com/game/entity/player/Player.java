@@ -3,28 +3,23 @@ package com.game.entity.player;
 import com.game.entity.enemy.Entity;
 import com.game.items.Item;
 import com.game.weapons.Weapon;
-
 import java.util.List;
 
 public class Player extends Entity {
 
-    // Player Attributes
-    private String name = "What's My name again?";
-    private int healthpoints = 100;
-    private int levelAddress;
-    Weapon weapon;
-    List<Item> inventory;
+    // Player Specific Attributes
+    private List<Item> inventory;
 
     // Player Constructor
 
 
-    public Player(String name, Weapon weapon, int levelAddress, int healthpoints, String name1, List<Item> inventory, Weapon starterWeapon, int levelAddress1, int healthpoints1) {
+    public Player(String name, Weapon weapon, int levelAddress, int healthpoints, List<Item> inventory) {
         super(name, weapon, levelAddress, healthpoints);
-        this.name = name1;
         this.inventory = inventory;
-        this.weapon = starterWeapon;
-        this.levelAddress = levelAddress1;
-        this.healthpoints = healthpoints1;
+    }
+
+    public Player() {
+        super("what is my name again?", null, 1, 100);
     }
 
     // Player Constructor (Empty)
@@ -32,43 +27,8 @@ public class Player extends Entity {
         super(name, weapon, levelAddress, healthpoints);
     }
 
-    public Player() {
-        super();
-    }
 
     // Getters and Setters
-
-        // Name
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-
-        //HP
-    public int getHealthpoints() {
-        return healthpoints;
-    }
-    public void setHealthpoints(int healthpoints) {
-        this.healthpoints = healthpoints;
-    }
-
-        //Level Location
-    public int getLevelAddress() {
-        return levelAddress;
-    }
-    public void setLevelAddress(int levelAddress) {
-        this.levelAddress = levelAddress;
-    }
-
-        //Weapon
-    public Weapon getWeapon() {
-        return weapon;
-    }
-    public void setWeapon(Weapon weapon) {
-        this.weapon = weapon;
-    }
 
         //Inventory
     public List<Item> getInventory() {
