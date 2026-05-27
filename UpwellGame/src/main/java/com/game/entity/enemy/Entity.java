@@ -18,4 +18,18 @@ public  abstract class Entity {
         this.healthpoints = healthpoints;
     }
 
+    // Empty Entity Constructor
+    public Entity() {
+    }
+
+    // Enemy toString
+    @Override
+    public String toString() {
+        return "Entity{" +
+                "name='" + name + '\'' +
+                ", healthpoints=" + healthpoints +
+                ", levelAddress=" + levelAddress +
+                ", weapon=" + weapon +
+                '}';
+    }
 }

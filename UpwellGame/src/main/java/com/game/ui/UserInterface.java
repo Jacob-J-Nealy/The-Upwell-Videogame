@@ -1,6 +1,7 @@
 package com.game.ui;
 
 import com.game.entity.enemy.Entity;
+import com.game.entity.enemy.Slime;
 import com.game.entity.player.Player;
 import com.game.weapons.Weapon;
 import com.game.weapons.player.Bow;
@@ -13,6 +14,7 @@ public class UserInterface {
     Scanner scanner = new Scanner(System.in);
     Colors colors = new Colors();
     Player player = new Player();
+    Slime slime = new Slime();
 
     // Application Helper Methods
     public void addColor(String text, String color) {
@@ -70,7 +72,7 @@ public class UserInterface {
     }
     public void battleLoop(Player player, Entity entity) {
 
-        addColor("---‼️ ‼️a " +  GREEN SLIME + " has appeared ‼️‼️---", Colors.GREEN);
+        addColor("---‼️ ‼️a " + slime.getName() + " has appeared ‼️‼️---", Colors.GREEN);
         waitForEnter();
 
         addColor("[BATTLE START]", Colors.BOLD);
