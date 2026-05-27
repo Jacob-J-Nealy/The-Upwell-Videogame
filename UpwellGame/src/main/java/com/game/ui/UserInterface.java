@@ -144,7 +144,7 @@ public class UserInterface {
         addColor("[Press ENTER to pick up the scroll...]", Colors.CYAN);
         waitForEnter();
     }
-    public void scrollInteraction(Player player) {
+    public Player scrollInteraction(Player player) {
 
         addColor("""
                 Etched in faded ink are three figures:
@@ -215,6 +215,8 @@ public class UserInterface {
                 It feels... right — as if it was meant for you.
                 """, Colors.RESET);
         waitForEnter();
+
+        return player;
 
     }
     public void findTunnelSequence() {
@@ -288,8 +290,6 @@ public class UserInterface {
         System.out.println("PLAYER NAME: " + player.getName());
         System.out.println("YOUR HP: "     + player.getHealthpoints());
         System.out.println("WEAPON: "      + player.getWeapon());
-        System.out.println();
-        System.out.println();
         System.out.println("╔════════════════════════════════════════════════════════════╗");
         System.out.println("║                       Your Options                         ║");
         System.out.println("╚════════════════════════════════════════════════════════════╝");
@@ -299,29 +299,6 @@ public class UserInterface {
 
         System.out.println("Choose Action ➜ ");
         scanner.nextLine();
-
-        System.out.println(""" 
-                ╔════════════════════════════════════════════════════════════╗
-                ║ BATTLE                                                     ║
-                ╠════════════════════════════════════════════════════════════╣
-                ║ ENEMY : GREEN SLIME                                        ║
-                ║ HP    : ▓▓▓▓▓▓▓░░░ 14/20                                   ║
-                ║ INTENT: ATTACKING                                          ║
-                ╠════════════════════════════════════════════════════════════╣
-                ║ PLAYER: JACOB                                              ║
-                ║ HP    : ▓▓▓▓▓▓▓▓▓▓ 30/30                                   ║
-                ║ WEAPON: TWIN DAGGERS                                       ║
-                ╚════════════════════════════════════════════════════════════╝
-                
-                [1] ATTACK
-                [2] DEFEND
-                [3] INVENTORY
-                
-                Choose Action ➜
-                
-                """);
-
-
 
     }
     public void playerTurn() {

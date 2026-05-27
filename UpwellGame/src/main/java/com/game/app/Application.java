@@ -7,8 +7,9 @@ import com.game.entity.player.Player;
 import com.game.ui.Colors;
 import com.game.ui.UserInterface;
 
-// 1. Finish Battle Loop
-// 2. Move Battle Loop to main()
+// - Players starter weapon is not attached to player
+// - Finish Battle Loop
+// - Move Battle Loop to main()
 
 public class Application {
 
