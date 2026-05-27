@@ -1,4 +1,4 @@
 package com.game.entity.enemy;
 
-public class Bat {
+public class Bat extends Entity {
 }

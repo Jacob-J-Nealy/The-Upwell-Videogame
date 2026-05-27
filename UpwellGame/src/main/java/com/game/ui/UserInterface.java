@@ -23,7 +23,6 @@ public class UserInterface {
 
         System.out.print(color + text + Colors.RESET);
     }
-
     public void waitForEnter() {
 
         while (true) {
@@ -37,6 +36,7 @@ public class UserInterface {
             }
         }
     }
+
 
     // Application Class Main Methods
     public void printGameLogo() {
@@ -59,7 +59,6 @@ public class UserInterface {
                 """, Colors.PURPLE);
         addColor("================================================================", Colors.CYAN);
     }
-
     public void introduction() {
 
         wakeUpSequence();
@@ -67,6 +66,9 @@ public class UserInterface {
         scrollInteraction();
         findTunnelSequence();
         slimeEncounterSequence();
+    }
+    public void battleLoop() {
+
     }
 
     // introduction() helper methods
@@ -295,6 +297,5 @@ public class UserInterface {
         System.out.println(Colors.RESET);
         System.out.println();
     }
-
 
 }
