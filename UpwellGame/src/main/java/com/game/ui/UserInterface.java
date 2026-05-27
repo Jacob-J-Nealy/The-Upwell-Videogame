@@ -23,6 +23,7 @@ public class UserInterface {
 
         System.out.print(color + text + Colors.RESET);
     }
+
     public void waitForEnter() {
 
         while (true) {
@@ -58,6 +59,7 @@ public class UserInterface {
                 """, Colors.PURPLE);
         addColor("================================================================", Colors.CYAN);
     }
+
     public void introduction() {
 
         wakeUpSequence();
@@ -65,98 +67,86 @@ public class UserInterface {
         scrollInteraction();
         findTunnelSequence();
         slimeEncounterSequence();
-
-        // 1. Make Weapon Choice Functionality a Method
-        // 2. Make Dialogue After Slime Fight a Method
-        // 3. Plan and Battle Sequence with Words
-        // 4. Plan with Code
-        // 5. Code Battle Sequence Method
-
-
-
-
     }
 
-        // introduction() helper methods
-        public void wakeUpSequence() {
+    // introduction() helper methods
+    public void wakeUpSequence() {
 
-            addColor(
-                    "\nTip: Press 'ENTER' to continue dialogue throughout game.",
-                    Colors.BOLD);
-            waitForEnter();
+        addColor(
+                "\nTip: Press 'ENTER' to continue dialogue throughout game.",
+                Colors.BOLD);
+        waitForEnter();
 
-            addColor(
-                    "It's dark...",
-                    Colors.BRIGHT_WHITE);
-            waitForEnter();
+        addColor(
+                "It's dark...",
+                Colors.BRIGHT_WHITE);
+        waitForEnter();
 
-            addColor(
-                    "Where am I?",
-                    Colors.BRIGHT_WHITE);
-            waitForEnter();
-
-            addColor("""
-        You wake up lying in a pool of shallow, cold water.
-        Your clothes cling to your body, completely drenched.
-        The air is damp and heavy, and the stench of mildew rises from your soaked shirt.
-        """, Colors.RESET);
-            waitForEnter();
-
-            addColor(
-                    "Was I... unconscious?",
-                    Colors.BRIGHT_WHITE);
-            waitForEnter();
-
-            addColor("""
-        As your eyes adjust, you take in your surroundings:
-        You’re inside a massive, circular chamber—like the bottom of a well.
-        Ancient bricks stack upward, perfectly uniform, disappearing into darkness.
-        The floor is flooded, water sloshing around your ankles.
-        """, Colors.RESET);
-            waitForEnter();
-
-            addColor(
-                    "Then you see it...",
-                    Colors.YELLOW);
-            waitForEnter();
-
-            addColor("""
-        Far above you, a faint glow — a light shining from the very top of the well.""",
-                    Colors.BRIGHT_WHITE);
-            waitForEnter();
-
-            addColor("I need to get out of here.", Colors.BRIGHT_WHITE);
-            waitForEnter();
-
-
-        }
-        public void discoverStairsSequence() {
-            addColor("""
-        You look around. Carved bricks extend out from the wall, 
-        staggered like makeshift stairs spiraling toward the light.
-        """, Colors.RESET);
-            waitForEnter();
-
-            addColor("[Press ENTER to approach the stairs...]", Colors.CYAN);
-            waitForEnter();
-
-            addColor("As you walk toward the stairs, something catches your eye...", Colors.RESET);
-            waitForEnter();
-
-            addColor("A weathered scroll lies on the first step.", Colors.YELLOW);
-            waitForEnter();
-
-            addColor("[Press ENTER to pick up the scroll...]", Colors.CYAN);
-            waitForEnter();
-        }
-        public void scrollInteraction() {
+        addColor(
+                "Where am I?",
+                Colors.BRIGHT_WHITE);
+        waitForEnter();
 
         addColor("""
-        Etched in faded ink are three figures:
-        - One holds a bow, steady and focused.
-        - One grips a massive sword, its blade gleaming in the dim light.
-        - One shrouded in a hood, crouched with twin daggers in hand.
-        """, Colors.RESET);
+                You wake up lying in a pool of shallow, cold water.
+                Your clothes cling to your body, completely drenched.
+                The air is damp and heavy, and the stench of mildew rises from your soaked shirt.
+                """, Colors.RESET);
+        waitForEnter();
+
+        addColor(
+                "Was I... unconscious?",
+                Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor("""
+                As your eyes adjust, you take in your surroundings:
+                You’re inside a massive, circular chamber—like the bottom of a well.
+                Ancient bricks stack upward, perfectly uniform, disappearing into darkness.
+                The floor is flooded, water sloshing around your ankles.
+                """, Colors.RESET);
+        waitForEnter();
+
+        addColor(
+                "Then you see it...",
+                Colors.YELLOW);
+        waitForEnter();
+
+        addColor("""
+                        Far above you, a faint glow — a light shining from the very top of the well.""",
+                Colors.BRIGHT_WHITE);
+        waitForEnter();
+
+        addColor("I need to get out of here.", Colors.BRIGHT_WHITE);
+        waitForEnter();
+    }
+    public void discoverStairsSequence() {
+        addColor("""
+                You look around. Carved bricks extend out from the wall, 
+                staggered like makeshift stairs spiraling toward the light.
+                """, Colors.RESET);
+        waitForEnter();
+
+        addColor("[Press ENTER to approach the stairs...]", Colors.CYAN);
+        waitForEnter();
+
+        addColor("As you walk toward the stairs, something catches your eye...", Colors.RESET);
+        waitForEnter();
+
+        addColor("A weathered scroll lies on the first step.", Colors.YELLOW);
+        waitForEnter();
+
+        addColor("[Press ENTER to pick up the scroll...]", Colors.CYAN);
+        waitForEnter();
+    }
+    public void scrollInteraction() {
+
+        addColor("""
+                Etched in faded ink are three figures:
+                - One holds a bow, steady and focused.
+                - One grips a massive sword, its blade gleaming in the dim light.
+                - One shrouded in a hood, crouched with twin daggers in hand.
+                """, Colors.RESET);
         waitForEnter();
 
         addColor("PLAYER TURN (Select Option Below)\n", Colors.BOLD);
@@ -186,13 +176,13 @@ public class UserInterface {
                     case 2 -> {
                         addColor("\nYou have a Chosen: ", Colors.BOLD);
                         addColor("A Giant Sword\n\n", Colors.PURPLE);
-                        player.setStarterWeapon(new Sword("Sword", 10,20));
+                        player.setStarterWeapon(new Sword("Sword", 10, 20));
                         deciding = false;
                     }
                     case 3 -> {
                         addColor("\nYou have a Chosen: ", Colors.BOLD);
                         addColor("Twin Daggers\n\n", Colors.PURPLE);
-                        player.setStarterWeapon(new TwinDaggers("Twin Daggers", 20,10));
+                        player.setStarterWeapon(new TwinDaggers("Twin Daggers", 20, 10));
                         deciding = false;
                     }
                     default -> System.err.print("❌ Incorrect Input. Please Try Again: ");
@@ -222,33 +212,33 @@ public class UserInterface {
         waitForEnter();
 
     }
-        public void findTunnelSequence() {
-            addColor("""
+    public void findTunnelSequence() {
+        addColor("""
                 Without hesitation, you begin to ascend the makeshift staircase.
                 Your boots splash in shallow puddles as you climb higher and higher...
                 """, Colors.RESET);
-            waitForEnter();
+        waitForEnter();
 
-            addColor("The air grows colder.", Colors.BRIGHT_WHITE);
-            waitForEnter();
+        addColor("The air grows colder.", Colors.BRIGHT_WHITE);
+        waitForEnter();
 
-            addColor("""
-            Suddenly, the stairs stop.
-            Built into the brick wall is a wide, open tunnel — carved unnaturally into the side of the well.
-            The stone surrounding it is cracked and darkened... like something burst through it.
-            """, Colors.RESET);
-            waitForEnter();
+        addColor("""
+                Suddenly, the stairs stop.
+                Built into the brick wall is a wide, open tunnel — carved unnaturally into the side of the well.
+                The stone surrounding it is cracked and darkened... like something burst through it.
+                """, Colors.RESET);
+        waitForEnter();
 
-            addColor("[Press ENTER to step into the tunnel...]", Colors.CYAN);
-            waitForEnter();
+        addColor("[Press ENTER to step into the tunnel...]", Colors.CYAN);
+        waitForEnter();
 
-            addColor("""
-            You slowly step inside, your weapon ready...
-            
-            """, Colors.BRIGHT_WHITE);
-            waitForEnter();
-        }
-        public void slimeEncounterSequence() {
+        addColor("""
+                You slowly step inside, your weapon ready...
+                
+                """, Colors.BRIGHT_WHITE);
+        waitForEnter();
+    }
+    public void slimeEncounterSequence() {
             addColor("It's completely dark... and silent.", Colors.GREY);
             waitForEnter();
 
