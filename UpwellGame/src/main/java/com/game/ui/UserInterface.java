@@ -74,7 +74,7 @@ public class UserInterface {
     public void battleLoop(Player player, Entity entity) {
 
         battleIntroduction(entity);
-        displayBattleHud();
+        displayBattleHud(player, entity);
         playerTurn();
 
     }
@@ -307,6 +307,9 @@ public class UserInterface {
         System.out.println("[1] Attack");
         System.out.println("[2] Defend");
         System.out.println("[3] Inventory");
+
+        System.out.println("Choose Action ➜ ");
+        scanner.nextLine();
 
         System.out.println(""" 
                 ╔════════════════════════════════════════════════════════════╗
