@@ -302,9 +302,11 @@ public class UserInterface {
         System.out.println();
         System.out.println();
         System.out.println("╔════════════════════════════════════════════════════════════╗");
-        System.out.println("║                       PLAYER Info                          ║");
+        System.out.println("║                       Your Options                         ║");
         System.out.println("╚════════════════════════════════════════════════════════════╝");
-
+        System.out.println("[1] Attack");
+        System.out.println("[2] Defend");
+        System.out.println("[3] Inventory");
 
         System.out.println(""" 
                 ╔════════════════════════════════════════════════════════════╗
