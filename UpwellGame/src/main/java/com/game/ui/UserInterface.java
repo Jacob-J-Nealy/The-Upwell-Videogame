@@ -69,10 +69,11 @@ public class UserInterface {
         scrollInteraction();
         findTunnelSequence();
         slimeEncounterSequence();
+        battleLoop(player, slime);
     }
     public void battleLoop(Player player, Entity entity) {
 
-        addColor("---‼️ ‼️a " + slime.getName() + " has appeared ‼️‼️---", Colors.GREEN);
+        addColor("---‼️ ‼️a " + entity.getName() + " has appeared ‼️‼️---", Colors.GREEN);
         waitForEnter();
 
         addColor("[BATTLE START]", Colors.BOLD);
