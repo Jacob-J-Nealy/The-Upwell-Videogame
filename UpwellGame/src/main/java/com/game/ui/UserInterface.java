@@ -290,7 +290,8 @@ public class UserInterface {
         System.out.println("║                        BATTLE                              ║");
         System.out.println("╚════════════════════════════════════════════════════════════╝");
         System.out.println("ENEMY :   " + entity.getName());
-        System.out.println("ENEMY HP: " + entity.);
+        System.out.println("ENEMY HP: " + entity.getHealthpoints());
+        System.out.println("WEAPON:   " + entity.getWeapon());
 
 
         System.out.println(""" 
