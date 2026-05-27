@@ -9,10 +9,10 @@ import java.util.List;
 public class Player extends Entity {
 
     // Player Attributes
-    private String name;
+    private String name = "What's My name again?";
     private int healthpoints = 100;
     private int levelAddress;
-    Weapon starterWeapon;
+    Weapon weapon;
     List<Item> inventory;
 
     // Player Constructor
@@ -22,7 +22,7 @@ public class Player extends Entity {
         super(name, weapon, levelAddress, healthpoints);
         this.name = name1;
         this.inventory = inventory;
-        this.starterWeapon = starterWeapon;
+        this.weapon = starterWeapon;
         this.levelAddress = levelAddress1;
         this.healthpoints = healthpoints1;
     }
@@ -63,11 +63,11 @@ public class Player extends Entity {
     }
 
         //Weapon
-    public Weapon getStarterWeapon() {
-        return starterWeapon;
+    public Weapon getWeapon() {
+        return weapon;
     }
-    public void setStarterWeapon(Weapon starterWeapon) {
-        this.starterWeapon = starterWeapon;
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
     }
 
         //Inventory

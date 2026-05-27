@@ -175,19 +175,19 @@ public class UserInterface {
                     case 1 -> {
                         addColor("\nYou have a Chosen: ", Colors.BOLD);
                         addColor("Bow & Arrow\n\n", Colors.PURPLE);
-                        player.setStarterWeapon(new Bow("Bow", 15, 15));
+                        player.setWeapon(new Bow("Bow", 15, 15));
                         deciding = false;
                     }
                     case 2 -> {
                         addColor("\nYou have a Chosen: ", Colors.BOLD);
                         addColor("A Giant Sword\n\n", Colors.PURPLE);
-                        player.setStarterWeapon(new Sword("Sword", 10, 20));
+                        player.setWeapon(new Sword("Sword", 10, 20));
                         deciding = false;
                     }
                     case 3 -> {
                         addColor("\nYou have a Chosen: ", Colors.BOLD);
                         addColor("Twin Daggers\n\n", Colors.PURPLE);
-                        player.setStarterWeapon(new TwinDaggers("Twin Daggers", 20, 10));
+                        player.setWeapon(new TwinDaggers("Twin Daggers", 20, 10));
                         deciding = false;
                     }
                     default -> System.err.print("❌ Incorrect Input. Please Try Again: ");
@@ -201,13 +201,13 @@ public class UserInterface {
         addColor("Suddenly, the scroll bursts into flames!", Colors.RED);
         waitForEnter();
 
-        addColor("The " + player.getStarterWeapon() + " appears for you to Grab.", Colors.BRIGHT_WHITE);
+        addColor("The " + player.getWeapon() + " appears for you to Grab.", Colors.BRIGHT_WHITE);
         waitForEnter();
 
         addColor("What...What is Happening Right Now?", Colors.BRIGHT_WHITE);
         waitForEnter();
 
-        addColor("Press ENTER to pick up the " + player.getStarterWeapon(), Colors.CYAN);
+        addColor("Press ENTER to pick up the " + player.getWeapon(), Colors.CYAN);
         waitForEnter();
 
         addColor("""
