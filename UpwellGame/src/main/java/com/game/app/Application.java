@@ -4,10 +4,8 @@ package com.game.app;
 import com.game.ui.Colors;
 import com.game.ui.UserInterface;
 
-// 2. Make Dialogue After Slime Fight a Method
-// 3. Plan and Battle Sequence with Words
-// 4. Plan with Code
-// 5. Code Battle Sequence Method
+// 1. Finish Battle Loop
+// 2. Move Battle Loop to main()
 
 public class Application {
 
@@ -15,7 +13,6 @@ public class Application {
 
         // Added Classes
         UserInterface ui = new UserInterface();
-        Colors colors    = new Colors();
 
         ui.printGameLogo();
         ui.introduction();

@@ -73,11 +73,9 @@ public class UserInterface {
     }
     public void battleLoop(Player player, Entity entity) {
 
-        addColor("---‼️ ‼️a " + entity.getName() + " has appeared ‼️‼️---", Colors.GREEN);
-        waitForEnter();
-
-        addColor("[BATTLE START]", Colors.BOLD);
-        waitForEnter();
+        battleIntroduction(entity);
+        displayBattleHud();
+        playerTurn();
 
     }
 
@@ -276,6 +274,53 @@ public class UserInterface {
             addColor("[BATTLE START]", Colors.BOLD);
             waitForEnter();
         }
+
+    // battleLoop() helper methods
+    public void battleIntroduction(Entity entity) {
+        addColor("---‼️ ‼️a " + entity.getName() + " has appeared ‼️‼️---", Colors.GREEN);
+        waitForEnter();
+
+        addColor("[BATTLE START]", Colors.BOLD);
+        waitForEnter();
+    }
+    public void displayBattleHud(Player player, Entity entity) {
+
+
+        System.out.println("╔════════════════════════════════════════════════════════════╗");
+        System.out.println("║                        BATTLE                              ║");
+        System.out.println("╚════════════════════════════════════════════════════════════╝");
+        System.out.println("ENEMY :   " + entity.getName());
+        System.out.println("ENEMY HP: " + entity.);
+
+
+        System.out.println(""" 
+                ╔════════════════════════════════════════════════════════════╗
+                ║ BATTLE                                                     ║
+                ╠════════════════════════════════════════════════════════════╣
+                ║ ENEMY : GREEN SLIME                                        ║
+                ║ HP    : ▓▓▓▓▓▓▓░░░ 14/20                                   ║
+                ║ INTENT: ATTACKING                                          ║
+                ╠════════════════════════════════════════════════════════════╣
+                ║ PLAYER: JACOB                                              ║
+                ║ HP    : ▓▓▓▓▓▓▓▓▓▓ 30/30                                   ║
+                ║ WEAPON: TWIN DAGGERS                                       ║
+                ╚════════════════════════════════════════════════════════════╝
+                
+                [1] ATTACK
+                [2] DEFEND
+                [3] INVENTORY
+                
+                Choose Action ➜
+                
+                """);
+
+
+
+    }
+    public void playerTurn() {
+
+
+    }
 
     // Unused Helper Methods
     public void waitForInput_3choice() {

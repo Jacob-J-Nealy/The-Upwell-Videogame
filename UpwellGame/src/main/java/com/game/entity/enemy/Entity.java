@@ -33,6 +33,7 @@ public  abstract class Entity {
                 '}';
     }
 
+    // Getters and Setters
     public String getName() {
         return name;
     }
