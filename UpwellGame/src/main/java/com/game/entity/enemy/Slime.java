@@ -1,4 +1,4 @@
 package com.game.entity.enemy;
 
-public class Slime {
+public class Slime extends Entity {
 }
