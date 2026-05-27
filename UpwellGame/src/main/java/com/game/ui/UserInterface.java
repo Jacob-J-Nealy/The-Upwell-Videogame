@@ -13,23 +13,7 @@ public class UserInterface {
     Colors colors = new Colors();
     Player player = new Player();
 
-    // Helper Methods
-    public void slowTextWriter(String text, int delay, String color) {
-        System.out.print(color);
-
-        for (char c : text.toCharArray()) {
-            System.out.print(c);
-            System.out.flush();
-
-            try {
-                Thread.sleep(delay);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
-        }
-        System.out.println(Colors.RESET);
-        System.out.println();
-    }
+    // Application Helper Methods
     public void addColor(String text, String color) {
 
         /**
@@ -52,22 +36,8 @@ public class UserInterface {
             }
         }
     }
-    public void waitForInput_3choice() {
 
-        while (true) {
-            int input = scanner.nextInt();
-
-            if (input == 1 || input == 2 || input == 3) {
-                System.out.println();
-                break;
-            } else {
-                System.err.println("PLEASE ENTER A VALID OPTION");
-            }
-        }
-    }
-
-
-    // Application Main Methods
+    // Application Class Main Methods
     public void printGameLogo() {
         addColor("""
                 _____ _            _   _                   _ _       \s
@@ -305,6 +275,36 @@ public class UserInterface {
             waitForEnter();
         }
 
+    // Unused Helper Methods
+    public void waitForInput_3choice() {
+
+        while (true) {
+            int input = scanner.nextInt();
+
+            if (input == 1 || input == 2 || input == 3) {
+                System.out.println();
+                break;
+            } else {
+                System.err.println("PLEASE ENTER A VALID OPTION");
+            }
+        }
+    }
+    public void slowTextWriter(String text, int delay, String color) {
+        System.out.print(color);
+
+        for (char c : text.toCharArray()) {
+            System.out.print(c);
+            System.out.flush();
+
+            try {
+                Thread.sleep(delay);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+        System.out.println(Colors.RESET);
+        System.out.println();
+    }
 
 
 }
