@@ -34,10 +34,36 @@ public  abstract class Entity {
     }
 
     // Getters and Setters
+
+        // Name
     public String getName() {
         return name;
     }
     public void setName(String name) {
         this.name = name;
+    }
+
+        // HP
+    public int getHealthpoints() {
+        return healthpoints;
+    }
+    public void setHealthpoints(int healthpoints) {
+        this.healthpoints = healthpoints;
+    }
+
+        // Level Address
+    public int getLevelAddress() {
+        return levelAddress;
+    }
+    public void setLevelAddress(int levelAddress) {
+        this.levelAddress = levelAddress;
+    }
+
+        // Weapon
+    public Weapon getWeapon() {
+        return weapon;
+    }
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
     }
 }
