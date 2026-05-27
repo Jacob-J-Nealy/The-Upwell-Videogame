@@ -287,11 +287,23 @@ public class UserInterface {
 
 
         System.out.println("╔════════════════════════════════════════════════════════════╗");
-        System.out.println("║                        BATTLE                              ║");
+        System.out.println("║                        ENEMY Info                          ║");
         System.out.println("╚════════════════════════════════════════════════════════════╝");
-        System.out.println("ENEMY :   " + entity.getName());
+        System.out.println("ENEMY: "    + entity.getName());
         System.out.println("ENEMY HP: " + entity.getHealthpoints());
-        System.out.println("WEAPON:   " + entity.getWeapon());
+        System.out.println("WEAPON: "   + entity.getWeapon());
+
+        System.out.println("╔════════════════════════════════════════════════════════════╗");
+        System.out.println("║                       PLAYER Info                          ║");
+        System.out.println("╚════════════════════════════════════════════════════════════╝");
+        System.out.println("PLAYER NAME: " + player.getName());
+        System.out.println("YOUR HP: "     + player.getHealthpoints());
+        System.out.println("WEAPON: "      + player.getWeapon());
+        System.out.println();
+        System.out.println();
+        System.out.println("╔════════════════════════════════════════════════════════════╗");
+        System.out.println("║                       PLAYER Info                          ║");
+        System.out.println("╚════════════════════════════════════════════════════════════╝");
 
 
         System.out.println(""" 
