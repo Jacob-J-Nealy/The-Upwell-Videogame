@@ -1,11 +1,12 @@
 package com.game.entity.player;
 
+import com.game.entity.enemy.Entity;
 import com.game.items.Item;
 import com.game.weapons.Weapon;
 
 import java.util.List;
 
-public class Player {
+public class Player extends Entity {
 
     // Player Attributes
     private String name;
