@@ -1,9 +1,7 @@
 package com.game.ui;
 
 import com.game.entity.enemy.Entity;
-import com.game.entity.enemy.Slime;
 import com.game.entity.player.Player;
-import com.game.weapons.Weapon;
 import com.game.weapons.player.Bow;
 import com.game.weapons.player.Sword;
 import com.game.weapons.player.TwinDaggers;
@@ -13,8 +11,6 @@ public class UserInterface {
 
     Scanner scanner = new Scanner(System.in);
     Colors colors = new Colors();
-    Player player = new Player();
-    Slime slime = new Slime();
 
     // Application Helper Methods
     public void addColor(String text, String color) {
@@ -62,14 +58,13 @@ public class UserInterface {
                 """, Colors.PURPLE);
         addColor("================================================================", Colors.CYAN);
     }
-    public void introduction() {
+    public void introduction(Player player) {
 
         wakeUpSequence();
         discoverStairsSequence();
-        scrollInteraction();
+        scrollInteraction(player);
         findTunnelSequence();
         slimeEncounterSequence();
-        battleLoop(player, slime);
     }
     public void battleLoop(Player player, Entity entity) {
 
@@ -149,7 +144,7 @@ public class UserInterface {
         addColor("[Press ENTER to pick up the scroll...]", Colors.CYAN);
         waitForEnter();
     }
-    public void scrollInteraction() {
+    public void scrollInteraction(Player player) {
 
         addColor("""
                 Etched in faded ink are three figures:
@@ -266,12 +261,6 @@ public class UserInterface {
                 You can see bones floating inside it... maybe human.
                 It jiggles with fury and lunges toward you!
                 """, Colors.RED);
-            waitForEnter();
-
-            addColor("---‼️ ‼️a GREEN SLIME has appeared ‼️‼️---", Colors.GREEN);
-            waitForEnter();
-
-            addColor("[BATTLE START]", Colors.BOLD);
             waitForEnter();
         }
 
