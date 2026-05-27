@@ -1,5 +1,6 @@
 package com.game.ui;
 
+import com.game.entity.enemy.Entity;
 import com.game.entity.player.Player;
 import com.game.weapons.Weapon;
 import com.game.weapons.player.Bow;
@@ -67,7 +68,13 @@ public class UserInterface {
         findTunnelSequence();
         slimeEncounterSequence();
     }
-    public void battleLoop() {
+    public void battleLoop(Player player, Entity entity) {
+
+        addColor("---‼️ ‼️a " +  GREEN SLIME + " has appeared ‼️‼️---", Colors.GREEN);
+        waitForEnter();
+
+        addColor("[BATTLE START]", Colors.BOLD);
+        waitForEnter();
 
     }
 
