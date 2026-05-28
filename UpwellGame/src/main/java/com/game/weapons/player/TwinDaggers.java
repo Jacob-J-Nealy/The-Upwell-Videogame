@@ -17,10 +17,36 @@ public class TwinDaggers extends Weapon {
     }
 
     // Player Action Methods
-    public void mainAttack() {
+    public int mainAttack() {
+        /**
+         * Functionality Explained:
+         *      -> 5% Chance of Missing
+         *      -> 25% Chance of Low Damage
+         *      -> 70% Chance of Average Damage
+         *      (All Damage variates +5 and -5 of base value)
+          */
 
+        double chance = Math.random();
+        if (chance <= 0.05) {
+            return 0;
+        } else if (chance > 0.05 && chance <= 0.25) {
+            return 15;
+        } else {
+            return 20;
+        }
     }
     public void heavyAttack() {
+        /**
+         * Functionality Explained:
+         *      -> 10% Chance of Missing
+         *      -> 25% Chance of Low Damage
+         *      -> 25% Chance of Average Damage
+         *      -> 35% Chance of High Damage
+         *      -> 5% Insanely High Damage
+         *      (All Damage variates +5 and -5 of base value)
+         */
+
+        double chance
 
     }
     public void specialAttack() {

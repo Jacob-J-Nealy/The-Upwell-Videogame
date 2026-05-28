@@ -38,7 +38,7 @@ public abstract class Weapon {
     }
 
     // Abstract Methods
-    public abstract void mainAttack();
+    public abstract int mainAttack();
     public abstract void heavyAttack();
     public abstract void specialAttack();
     public abstract void defend();

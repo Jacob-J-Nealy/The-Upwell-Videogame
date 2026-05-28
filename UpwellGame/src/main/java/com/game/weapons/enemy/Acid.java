@@ -16,8 +16,8 @@ public class Acid extends Weapon {
     }
 
     @Override
-    public void mainAttack() {
-
+    public int mainAttack() {
+        return 0;
     }
 
     @Override
