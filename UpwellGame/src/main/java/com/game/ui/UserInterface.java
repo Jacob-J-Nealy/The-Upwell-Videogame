@@ -298,7 +298,17 @@ public class UserInterface {
         System.out.println("[3] Inventory");
 
         System.out.println("Choose Action ➜ ");
-        scanner.nextLine();
+
+        int playerChoice = scanner.nextInt();
+
+        switch (playerChoice) {
+            case 1 -> attackHud();
+            case 2 -> defend();
+            case 3 -> inventoryHud();
+
+        }
+
+
 
     }
     public void playerTurn() {
