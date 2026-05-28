@@ -307,6 +307,7 @@ public class UserInterface {
             case 1 -> attackScreen();
             case 2 -> defendOption();
             case 3 -> inventoryScreen();
+            default -> System.out.println("Incorrect Input");
 
         }
 
