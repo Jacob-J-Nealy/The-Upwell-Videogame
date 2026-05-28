@@ -297,24 +297,34 @@ public class UserInterface {
         System.out.println("[2] Defend");
         System.out.println("[3] Inventory");
 
-        System.out.println("Choose Action ➜ ");
+        System.out.print("Choose Action ➜ ");
+    }
+    public int playerTurn() {
 
         int playerChoice = scanner.nextInt();
 
         switch (playerChoice) {
-            case 1 -> attackHud();
-            case 2 -> defend();
-            case 3 -> inventoryHud();
+            case 1 -> attackScreen();
+            case 2 -> defendOption();
+            case 3 -> inventoryScreen();
 
         }
 
+        return playerChoice;
+    }
 
+    // displayBattleHud() helper methods
+     public void attackScreen() {
+
+     }
+    public void defendOption() {
 
     }
-    public void playerTurn() {
-
+    public void inventoryScreen() {
 
     }
+
+
 
     // Unused Helper Methods
     public void waitForInput_3choice() {
