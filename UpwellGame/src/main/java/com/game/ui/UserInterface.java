@@ -317,6 +317,15 @@ public class UserInterface {
     // displayBattleHud() helper methods
      public void attackScreen() {
 
+         System.out.println("╔════════════════════════════════════════════════════════════╗");
+         System.out.println("║                       Attack Options                       ║");
+         System.out.println("╚════════════════════════════════════════════════════════════╝");
+         System.out.println("[1] Main Attack");
+         System.out.println("[2] Heavy Attack");
+         System.out.println("[3] Special Attack");
+
+         System.out.print("Choose Action ➜ ");
+
      }
     public void defendOption() {
 
