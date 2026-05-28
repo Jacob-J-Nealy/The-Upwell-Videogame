@@ -70,7 +70,7 @@ public class UserInterface {
 
         battleIntroduction(entity);
         displayBattleHud(player, entity);
-        playerTurn();
+        playerTurn(player, entity);
 
     }
 
@@ -299,33 +299,44 @@ public class UserInterface {
 
         System.out.print("Choose Action ➜ ");
     }
-    public int playerTurn() {
+    public int playerTurn( Player player, Entity entity) {
 
-        int playerChoice = scanner.nextInt();
+        int playerMainChoice = scanner.nextInt();
 
-        switch (playerChoice) {
-            case 1 -> attackScreen();
+        switch (playerMainChoice) {
+            case 1 -> attackScreen(player, entity);
             case 2 -> defendOption();
             case 3 -> inventoryScreen();
             default -> System.out.println("Incorrect Input");
 
         }
 
-        return playerChoice;
+        return playerMainChoice;
     }
 
     // displayBattleHud() helper methods
-     public void attackScreen() {
+     public void attackScreen(Player player, Entity entity) {
 
          System.out.println("╔════════════════════════════════════════════════════════════╗");
          System.out.println("║                       Attack Options                       ║");
          System.out.println("╚════════════════════════════════════════════════════════════╝");
-         System.out.println("[1] Main Attack");
+         System.out.println("[1] Main  Attack");
          System.out.println("[2] Heavy Attack");
          System.out.println("[3] Special Attack");
+         System.out.println("[0] Return to Main Options");
 
          System.out.print("Choose Action ➜ ");
+         int playerActionChoice = scanner.nextInt();
 
+         switch (playerActionChoice) {
+             case 1 ->
+             case 2 ->
+             case 3 ->
+             case 0 -> {
+                 return;
+             }
+             default -> System.out.println("Incorrect Input");
+         }
      }
     public void defendOption() {
 
