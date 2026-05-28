@@ -46,7 +46,8 @@ public class TwinDaggers extends Weapon {
          *      (All Damage variates +5 and -5 of base value)
          */
 
-        double chance
+        double chance = Math.random();
+        if (chance)
 
     }
     public void specialAttack() {
