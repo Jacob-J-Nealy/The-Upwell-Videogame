@@ -305,7 +305,7 @@ public class UserInterface {
 
         switch (playerMainChoice) {
             case 1 -> attackScreen(player, entity);
-            case 2 -> defendOption();
+            case 2 -> defendOption(player, entity);
             case 3 -> inventoryScreen();
             default -> System.out.println("Incorrect Input");
 
@@ -329,20 +329,17 @@ public class UserInterface {
          int playerActionChoice = scanner.nextInt();
 
          switch (playerActionChoice) {
-             case 1 -> { player.getWeapon().mainAttack();
-             }
-             case 2 -> { player.getWeapon().heavyAttack();
-             }
-             case 3 -> { player.getWeapon().specialAttack();
-             }
+             case 1 -> player.getWeapon().mainAttack();
+             case 2 -> player.getWeapon().heavyAttack();
+             case 3 -> player.getWeapon().specialAttack();
              case 0 -> {
                  return;
              }
              default -> System.out.println("Incorrect Input");
          }
      }
-    public void defendOption() {
-
+    public void defendOption(Player player, Entity entity) {
+        player.getWeapon().defend();
     }
     public void inventoryScreen() {
 
