@@ -329,9 +329,12 @@ public class UserInterface {
          int playerActionChoice = scanner.nextInt();
 
          switch (playerActionChoice) {
-             case 1 ->
-             case 2 ->
-             case 3 ->
+             case 1 -> { player.getWeapon().mainAttack();
+             }
+             case 2 -> { player.getWeapon().heavyAttack();
+             }
+             case 3 -> { player.getWeapon().specialAttack();
+             }
              case 0 -> {
                  return;
              }
