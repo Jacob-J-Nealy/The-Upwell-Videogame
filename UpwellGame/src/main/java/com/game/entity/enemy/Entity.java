@@ -22,7 +22,7 @@ public  abstract class Entity {
     public Entity() {
     }
 
-    // Enemy toString
+    // Entity toString
     @Override
     public String toString() {
         return "Entity{" +
@@ -31,6 +31,18 @@ public  abstract class Entity {
                 ", levelAddress=" + levelAddress +
                 ", weapon=" + weapon +
                 '}';
+    }
+
+    // Action Methods
+    public void takeDamage(int damage) {
+        this.healthpoints -= damage;
+
+        if (this.healthpoints < 0) {
+            this.healthpoints = 0;
+        }
+    }
+    public boolean isAlive() {
+        return this.healthpoints > 0;
     }
 
     // Getters and Setters
@@ -42,7 +54,6 @@ public  abstract class Entity {
     public void setName(String name) {
         this.name = name;
     }
-
         // HP
     public int getHealthpoints() {
         return healthpoints;
