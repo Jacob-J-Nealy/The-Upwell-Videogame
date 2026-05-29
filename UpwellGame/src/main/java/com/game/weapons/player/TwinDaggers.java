@@ -10,13 +10,16 @@ public class TwinDaggers extends Weapon {
         super(name, attackPower, defensePower);
     }
 
+    // Attributes
+    private boolean isCharged = false;
+
     // toString
     @Override
     public String toString() {
         return Colors.PURPLE + "Twin Daggers" + Colors.RESET;
     }
 
-    // Player Action Methods
+    // Player Attack Methods
     @Override
     public int mainAttack() {
         /**
@@ -38,6 +41,7 @@ public class TwinDaggers extends Weapon {
             return applyVariance(getAttackPower(),5); // average damage
         }
     }
+    @Override
     public int heavyAttack() {
         /**
          * Functionality Explained:
@@ -56,15 +60,51 @@ public class TwinDaggers extends Weapon {
         } else if (chance < 0.35) {
             return applyVariance((int)(getAttackPower() * 0.6), 5); // low damage
         } else if (chance < 0.60) {
-            return
+            return applyVariance((getAttackPower()),5); // average damage
+        } else if (chance < 0.95) {
+            return applyVariance((int)(getAttackPower() * 1.4),5); // high damage
+        } else {
+            return applyVariance((int)(getAttackPower() * 2.0),10);
         }
 
     }
+    @Override
     public int specialAttack() {
+        /**
+         * Functionality Explained:
+         *      -> Uses 1 Turn to charge Special Attack
+         *      -> Does Heavy Hit with 50% chance to chain another attack infinitely
+         *      (All Damage variates +4 and -4 of base value)
+         */
+        if (!isCharged) {
+            charge(); // skip turn
+            return 0;
+        }
 
-        return 0;
+        isCharged = false; // uses charge
+        int totalDamage = 0;
+        boolean continueChain = true;
+
+        while (continueChain) {
+            int hit = applyVariance((int)(getAttackPower() * 0.8), 4);
+            totalDamage += hit;
+
+            double chance = Math.random();
+
+            if (chance >= 0.5) {
+                continueChain = false;
+            }
+        }
+
+        return totalDamage;
     }
+
+
+    // Player Other Methods
     public void defend() {
 
+    }
+    public void charge() {
+        isCharged = true;
     }
 }
