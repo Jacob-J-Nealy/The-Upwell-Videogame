@@ -29,7 +29,7 @@ public class TwinDaggers extends Weapon {
         double chance = Math.random();
         if (chance <= 0.05) {
             return 0;
-        } else if (chance > 0.05 && chance <= 0.25) {
+        } else if (chance > 0.05 && chance <= 0.30) {
             return 15;
         } else {
             return 20;

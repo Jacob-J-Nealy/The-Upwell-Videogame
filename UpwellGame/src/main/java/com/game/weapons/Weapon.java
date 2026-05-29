@@ -37,11 +37,19 @@ public abstract class Weapon {
         this.defensePower = defensePower;
     }
 
-    // Abstract Methods
+    // Abstract Action Methods
     public abstract int mainAttack();
     public abstract void heavyAttack();
     public abstract void specialAttack();
     public abstract void defend();
+
+    // Protected Methods
+    protected int applyVariance(int base, int variance) {
+        int min = base - variance;
+        int max = base + variance;
+
+        return min + (int)(Math.random() * (max - min + 1));
+    }
 }
 
 
