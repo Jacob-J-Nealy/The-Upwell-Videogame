@@ -21,12 +21,13 @@ public class Acid extends Weapon {
     }
 
     @Override
-    public void heavyAttack() {
+    public int heavyAttack() {
 
+        return 0;
     }
 
     @Override
-    public void specialAttack() {
+    public int specialAttack() {
 
     }
 

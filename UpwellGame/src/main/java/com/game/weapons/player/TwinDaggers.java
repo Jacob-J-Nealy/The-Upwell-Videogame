@@ -38,7 +38,7 @@ public class TwinDaggers extends Weapon {
             return applyVariance(getAttackPower(),5); // average damage
         }
     }
-    public void heavyAttack() {
+    public int heavyAttack() {
         /**
          * Functionality Explained:
          *      -> 10% Chance of Missing
@@ -50,11 +50,19 @@ public class TwinDaggers extends Weapon {
          */
 
         double chance = Math.random();
-        if (chance)
+
+        if (chance < 0.10) {
+            return 0; // missed
+        } else if (chance < 0.35) {
+            return applyVariance((int)(getAttackPower() * 0.6), 5); // low damage
+        } else if (chance < 0.60) {
+            return
+        }
 
     }
-    public void specialAttack() {
+    public int specialAttack() {
 
+        return 0;
     }
     public void defend() {
 

@@ -20,11 +20,13 @@ public class Sword extends Weapon {
     public int mainAttack() {
         return 0;
     }
-    public void heavyAttack() {
+    public int heavyAttack() {
 
+        return 0;
     }
-    public void specialAttack() {
+    public int specialAttack() {
 
+        return 0;
     }
     public void defend() {
 
