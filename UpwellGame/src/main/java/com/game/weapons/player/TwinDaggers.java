@@ -17,6 +17,7 @@ public class TwinDaggers extends Weapon {
     }
 
     // Player Action Methods
+    @Override
     public int mainAttack() {
         /**
          * Functionality Explained:
@@ -28,11 +29,13 @@ public class TwinDaggers extends Weapon {
 
         double chance = Math.random();
         if (chance <= 0.05) {
-            return 0;
-        } else if (chance > 0.05 && chance <= 0.30) {
-            return 15;
-        } else {
-            return 20;
+            return 0; // missed
+        }
+        else if (chance > 0.05 && chance <= 0.30) {
+            return applyVariance((int)(getAttackPower() * 0.7), 5); // low damage
+        }
+        else {
+            return applyVariance(getAttackPower(),5); // average damage
         }
     }
     public void heavyAttack() {
