@@ -9,6 +9,7 @@ public  abstract class Entity {
     private int healthpoints;
     private int levelAddress;
     private Weapon weapon;
+    protected int damageReduction = 0;
 
     // Entity Constructor
     public Entity(String name, Weapon weapon, int levelAddress, int healthpoints) {
