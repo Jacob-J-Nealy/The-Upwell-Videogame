@@ -41,7 +41,7 @@ public abstract class Weapon {
     public abstract int mainAttack();
     public abstract int heavyAttack();
     public abstract int specialAttack();
-    public abstract void defend();
+    public abstract int defend();
 
     // Protected Methods
     protected int applyVariance(int base, int variance) {

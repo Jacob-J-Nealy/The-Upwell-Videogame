@@ -28,7 +28,7 @@ public class Sword extends Weapon {
 
         return 0;
     }
-    public void defend() {
+    public int defend() {
 
     }
 

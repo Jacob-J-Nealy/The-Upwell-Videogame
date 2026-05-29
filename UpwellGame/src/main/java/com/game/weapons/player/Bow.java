@@ -26,7 +26,7 @@ public class Bow extends Weapon {
     public int specialAttack() {
 
     }
-    public void defend() {
+    public int defend() {
 
     }
 

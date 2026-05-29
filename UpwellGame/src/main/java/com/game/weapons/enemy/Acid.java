@@ -32,7 +32,7 @@ public class Acid extends Weapon {
     }
 
     @Override
-    public void defend() {
+    public int defend() {
 
     }
 }

@@ -101,8 +101,20 @@ public class TwinDaggers extends Weapon {
 
 
     // Player Other Methods
-    public void defend() {
+    @Override
+    public int defend() {
+        /**
+         * Functionality Explained:
+         *      -> Has a 30% Chance to completely dodge attack
+         *      -> If Dodge fails, gives small defense
+         */
+        double chance = Math.random();
 
+        if (chance < 0.3) {
+            return 0; // dodge
+        }
+
+        return applyVariance(getDefensePower(), 3); // light parry block
     }
     public void charge() {
         isCharged = true;
