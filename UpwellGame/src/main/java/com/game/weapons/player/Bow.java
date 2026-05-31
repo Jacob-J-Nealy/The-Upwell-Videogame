@@ -25,9 +25,11 @@ public class Bow extends Weapon {
     }
     public int specialAttack() {
 
+        return 0;
     }
     public int defend() {
 
+        return 0;
     }
 
 

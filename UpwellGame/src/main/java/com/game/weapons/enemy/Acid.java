@@ -29,10 +29,12 @@ public class Acid extends Weapon {
     @Override
     public int specialAttack() {
 
+        return 0;
     }
 
     @Override
     public int defend() {
 
+        return 0;
     }
 }
