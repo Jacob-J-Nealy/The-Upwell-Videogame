@@ -151,7 +151,7 @@ The atmosphere and mechanics are loosely inspired by:
 
 ### 🖥️ Game Running in the Terminal
 
-![Game Screenshot](images/game-terminal.png)
+![Game Screenshot](images/slime=appears.png)
 
 Example of the dialogue and exploration systems running in the terminal.
 
