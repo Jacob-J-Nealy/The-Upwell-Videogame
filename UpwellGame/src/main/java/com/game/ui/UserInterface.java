@@ -70,8 +70,15 @@ public class UserInterface {
 
         battleIntroduction(entity);
         displayBattleHud(player, entity);
-        playerTurn(player, entity);
-        enemyTurn(player, entity);
+
+        boolean bothAlive = true;
+
+        while (bothAlive) {
+
+            playerTurn(player, entity);
+            enemyTurn(player, entity);
+            
+        }
 
     }
 
