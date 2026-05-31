@@ -71,6 +71,7 @@ public class UserInterface {
         battleIntroduction(entity);
         displayBattleHud(player, entity);
         playerTurn(player, entity);
+        enemyTurn(player, entity);
 
     }
 
@@ -328,15 +329,26 @@ public class UserInterface {
          System.out.print("Choose Action ➜ ");
          int playerActionChoice = scanner.nextInt();
 
+         int damage;
+
          switch (playerActionChoice) {
-             case 1 -> player.getWeapon().mainAttack();
-             case 2 -> player.getWeapon().heavyAttack();
-             case 3 -> player.getWeapon().specialAttack();
+             case 1 -> damage = player.getWeapon().mainAttack();
+             case 2 -> damage = player.getWeapon().heavyAttack();
+             case 3 -> damage = player.getWeapon().specialAttack();
              case 0 -> {
                  return;
              }
-             default -> System.out.println("Incorrect Input");
+             default -> {
+                 System.out.println("Incorrect Input");
+                 return;
+             }
          }
+
+         // apply damage to enemy
+         entity.takeDamage(damage);
+
+         // show damage
+         System.out.println(player.getName() + " dealt " + damage + "damage!");
      }
     public void defendOption(Player player, Entity entity) {
         player.getWeapon().defend();
