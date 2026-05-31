@@ -145,7 +145,7 @@ public class UserInterface {
         addColor("[Press ENTER to pick up the scroll...]", Colors.CYAN);
         waitForEnter();
     }
-    public Player scrollInteraction(Player player) {
+    public void scrollInteraction(Player player) {
 
         addColor("""
                 Etched in faded ink are three figures:
@@ -216,8 +216,6 @@ public class UserInterface {
                 It feels... right — as if it was meant for you.
                 """, Colors.RESET);
         waitForEnter();
-
-        return player;
 
     }
     public void findTunnelSequence() {
