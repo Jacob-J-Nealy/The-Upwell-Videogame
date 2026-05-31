@@ -2,44 +2,78 @@
 
 **The Upwell** is a **text-based, turn-based RPG built in Java**.
 
-You wake up at the **bottom of a massive well**, soaked in cold water with **no memory of how you got there**. The only way forward is **up**.
+You awaken at the bottom of a massive well, soaked in cold water with **no memory of how you got there**. The only way forward is **up**.
 
-Armed with a weapon of your choosing, you begin climbing toward a faint light above — encountering strange creatures, making decisions, and uncovering pieces of a story hidden deep within the dungeon.
+Armed with a weapon of your choosing, you begin climbing toward a faint light above — encountering strange creatures, making decisions, battling monsters, and uncovering the secrets hidden within the depths of the dungeon.
 
-This project started as a way for me to **practice object-oriented design and game logic in Java**, while also building something fun and atmospheric.
+What began as a small Java project has grown into an ongoing personal development project focused on improving my skills in **Object-Oriented Programming, software architecture, game systems, and Java development**.
 
 ---
 
 ## 🎮 Features
 
-- 🌑 **Cinematic intro** with immersive text-based storytelling  
-- 🧱 **Weapon selection system** — Sword, Bow, or Twin Daggers  
-- ⚔️ **Turn-based combat system** (first enemy battle currently in development)  
-- 🎨 **Colored terminal output** using ANSI codes for improved readability  
-- 🧠 **Object-Oriented design** using abstract classes and inheritance (`Weapon` → subclasses)  
-- 🧪 Built with a **clean, modular structure** to make expanding the game easier  
+### Story & Exploration
+
+* 🌑 Cinematic introduction with immersive text-based storytelling
+* 🧱 Dungeon exploration through interactive dialogue and player decisions
+* 📖 Narrative-driven progression with expandable story content
+
+### Combat
+
+* ⚔️ Turn-based combat framework
+* 🗡️ Weapon selection system:
+
+    * Sword
+    * Bow
+    * Twin Daggers
+* 👾 First enemy encounter implemented (Green Slime)
+* 🎯 Weapon-specific attack behaviors currently in development
+
+### Technical Features
+
+* 🎨 Colored terminal UI using ANSI escape codes
+* 🧠 Object-Oriented architecture using inheritance and abstraction
+* 🧩 Abstract `Weapon` class with specialized subclasses
+* 🔄 Modular game flow built around reusable methods and systems
+* 🧪 Designed with future expansion in mind
 
 ---
 
-## 🚧 Current Development Status
+## 🚧 Current Development Status (June 2026)
 
-After an initial development sprint, this project went on pause while I focused on other commitments.
+Development resumed after a lengthy pause and is now actively progressing again.
 
-I'm now **returning to development after ~9 months** to continue building the combat system and expanding the dungeon.
+Current completed systems include:
 
-Current progress includes:
+### ✅ Core Systems
 
-- Intro story sequence
-- Weapon selection system
-- Player input handling
-- Game UI framework
-- First enemy encounter (Green Slime)
+* Game startup and UI framework
+* Story introduction sequence
+* Dialogue progression system
+* Player input validation
+* Weapon selection system
+* Player weapon assignment
+* Enemy encounter system
+* Combat menu framework
+* Battle HUD framework
+* Abstract weapon hierarchy
 
-Next goals:
+### 🔨 Currently In Development
 
-- Finish the **battle system**
-- Add **enemy AI behaviors**
-- Expand the dungeon progression
+* Weapon attack functionality
+* Damage calculation system
+* Battle loop logic
+* Enemy AI behavior
+* HP bar system
+* Combat balancing
+
+### 🎯 Next Milestones
+
+* Complete first fully playable battle
+* Implement Green Slime combat AI
+* Add victory and defeat conditions
+* Expand dungeon progression beyond the first encounter
+* Introduce additional enemy types
 
 ---
 
@@ -47,85 +81,135 @@ Next goals:
 
 ### 📦 Clone the Repository
 
-Open **Git Bash** (or your terminal) and run:
+Open Git Bash (or your terminal) and run:
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/upwell-game.git
 ```
 
----
-
 ### 💻 Open the Project
 
-1. Open **IntelliJ IDEA**
-2. Select **Open Project**
+1. Open IntelliJ IDEA
+2. Select Open Project
 3. Navigate to the cloned folder
-4. Run the main Java class to start the game
+4. Run the main Java class
 
 ---
 
 ## 🎯 Project Goals
 
-This project helps me practice and demonstrate:
+This project serves as a long-term environment for practicing and improving:
 
-- Object-Oriented Programming (OOP)
-- Game state management
-- Turn-based combat logic
-- User input handling
-- Modular code design
-- Git & GitHub version control
+* Object-Oriented Programming (OOP)
+* Inheritance & Polymorphism
+* Abstraction & Encapsulation
+* Software Architecture
+* Game State Management
+* Combat System Design
+* AI Behavior Design
+* Java Development
+* Clean Code Principles
+* Git & GitHub Version Control
+
+---
+
+## 🔄 Continuous Development Philosophy
+
+The Upwell is intentionally designed as a project that can continue evolving indefinitely.
+
+Even after reaching a "playable" or "complete" state, development will continue as new ideas and skills are learned.
+
+Future improvements may include:
+
+* Refactoring existing systems
+* Improved software architecture
+* More sophisticated enemy AI
+* Additional bosses and enemies
+* New weapons and combat mechanics
+* Expanded storylines and dialogue
+* Better dungeon generation and progression systems
+* Save and load functionality
+* New gameplay systems and features
+
+In that sense, **The Upwell is never truly finished** — it grows alongside my development as a software engineer.
 
 ---
 
 ## 💡 Inspiration
 
-The atmosphere and mechanics are loosely inspired by classic games like:
+The atmosphere and mechanics are loosely inspired by:
 
-- Undertale
-- Pokémon (turn-based combat)
-- Classic text adventure games
-- Dungeon crawler RPGs
+* Undertale
+* Pokémon (turn-based combat)
+* Classic text adventure games
+* Dungeon crawler RPGs
+* Terminal-based roguelikes
 
 ---
 
 ## 📸 Screenshots
 
-Here are some visuals from the development of **The Upwell**.
-
 ### 🖥️ Game Running in the Terminal
+
 ![Game Screenshot](images/game-terminal.png)
 
-Example of the intro sequence and dialogue system running in the terminal.
+Example of the dialogue and exploration systems running in the terminal.
 
 ---
 
-### 🧠 Project Structure (IntelliJ IDEA)
+### 🧠 IntelliJ Project Structure
+
 ![IDE Screenshot](images/ide-structure.png)
 
-View of the project inside IntelliJ IDEA showing the object-oriented structure of the game.
+Current project organization demonstrating the modular object-oriented architecture.
 
 ---
 
 ### 🧩 UML Class Diagram
+
 ![UML Diagram](images/upwell-uml.png)
 
-The UML diagram showing relationships between the core classes such as `Player`, `Weapon`, `Enemy`, and the game interface.
+Class relationships between the core game systems including Player, Entity, Weapon, and User Interface components.
+
+---
 
 ## 📌 Author
 
 **Jacob Nealy**
 
-Software Developer | Java | Game Logic | Systems Design
+Software Developer • Java • Object-Oriented Design • Game Systems
 
 ---
 
-## 🚀 Future Plans
+## 🚀 Long-Term Roadmap
 
-Features planned for future development:
+### Combat
 
-- More enemy types
-- Status effects (poison, stun, etc.)
-- Player inventory system
-- Boss encounters
-- Dungeon progression system
-- Save/load system
+* Advanced enemy AI
+* Status effects
+* Critical hits
+* Boss mechanics
+* Unique weapon abilities
+
+### Exploration
+
+* Additional dungeon levels
+* Story branches
+* NPC interactions
+* Hidden events
+
+### Systems
+
+* Inventory system
+* Equipment upgrades
+* Save/load functionality
+* Player progression system
+* Experience and leveling
+
+### Technical Improvements
+
+* Further architecture refactoring
+* Expanded test coverage
+* Improved modularity
+* Additional design patterns
+* Enhanced terminal UI
