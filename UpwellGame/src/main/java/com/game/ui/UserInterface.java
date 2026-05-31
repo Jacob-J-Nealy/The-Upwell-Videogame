@@ -326,7 +326,13 @@ public class UserInterface {
     }
     public  boolean checkDeath(Player player, Entity entity, boolean bothalive) {
 
-        return false;
+        if (player.getHealthpoints() <= 0) {
+            bothalive = false;
+        } else {
+            bothalive = true;
+        }
+
+        return bothalive;
     }
 
     // displayBattleHud() helper methods
