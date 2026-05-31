@@ -151,7 +151,7 @@ The atmosphere and mechanics are loosely inspired by:
 
 ### 🖥️ Game Running in the Terminal
 
-![Game Screenshot](images/slime=appears.png)
+![Game Screenshot](UpwellGame/images/slime-appears.png)
 
 Example of the dialogue and exploration systems running in the terminal.
 
@@ -159,7 +159,7 @@ Example of the dialogue and exploration systems running in the terminal.
 
 ### 🧠 IntelliJ Project Structure
 
-![IDE Screenshot](images/ide-structure.png)
+![IDE Screenshot](UpwellGame/images/ide-structure.png)
 
 Current project organization demonstrating the modular object-oriented architecture.
 
@@ -167,7 +167,7 @@ Current project organization demonstrating the modular object-oriented architect
 
 ### 🧩 UML Class Diagram
 
-![UML Diagram](images/upwell-uml.png)
+![UML Diagram](UpwellGame/images/upwell-uml.png)
 
 Class relationships between the core game systems including Player, Entity, Weapon, and User Interface components.
 
