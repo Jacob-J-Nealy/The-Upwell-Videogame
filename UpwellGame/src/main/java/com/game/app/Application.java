@@ -13,6 +13,11 @@ import com.game.ui.UserInterface;
  *  -> Add attack messages of weapons
  *  -> Add damage logic for other weapons
  *  -> Build Slime AI
+ *  5.31
+ *  -> Fix repetition of starter weapon choice
+ *  -> Make Battle more battle Ui more compact
+ *  -> Make Attack Screen UI more compact
+ *  -> Loop doesn't work hahaha lol
  */
 
 public class Application {
