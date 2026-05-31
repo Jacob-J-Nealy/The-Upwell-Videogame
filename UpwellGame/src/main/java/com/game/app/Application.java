@@ -7,9 +7,13 @@ import com.game.entity.player.Player;
 import com.game.ui.Colors;
 import com.game.ui.UserInterface;
 
-// - Players starter weapon is not attached to player
-// - Finish Battle Loop
-// - Move Battle Loop to main()
+/** What's Next 05.30.26
+ *  -> Turn battleLoop() Method into an actual loop with checking of death status
+ *  -> Add HP Bars for Player and Enemies
+ *  -> Add attack messages of weapons
+ *  -> Add damage logic for other weapons
+ *  -> Build Slime AI
+ */
 
 public class Application {
 
