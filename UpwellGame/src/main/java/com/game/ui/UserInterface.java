@@ -69,12 +69,12 @@ public class UserInterface {
     public void battleLoop(Player player, Entity entity) {
 
         battleIntroduction(entity);
-        displayBattleHud(player, entity);
 
         boolean bothAlive = true;
 
         while (bothAlive) {
 
+            displayBattleHud(player, entity);
             playerTurn(player, entity);
             enemyTurn(player, entity);
             checkDeath(player, entity, bothAlive);
