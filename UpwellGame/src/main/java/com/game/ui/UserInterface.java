@@ -314,6 +314,10 @@ public class UserInterface {
 
         return playerMainChoice;
     }
+    public int enemyTurn(Player player, Entity entity) {
+
+        return 0;
+    }
 
     // displayBattleHud() helper methods
      public void attackScreen(Player player, Entity entity) {
