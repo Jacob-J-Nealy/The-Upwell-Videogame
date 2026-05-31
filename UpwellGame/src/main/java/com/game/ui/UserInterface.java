@@ -77,7 +77,8 @@ public class UserInterface {
 
             playerTurn(player, entity);
             enemyTurn(player, entity);
-            
+            checkDeath(player, entity, bothAlive);
+
         }
 
     }
@@ -322,6 +323,10 @@ public class UserInterface {
     public int enemyTurn(Player player, Entity entity) {
 
         return 0;
+    }
+    public  boolean checkDeath(Player player, Entity entity, boolean bothalive) {
+
+        return false;
     }
 
     // displayBattleHud() helper methods
