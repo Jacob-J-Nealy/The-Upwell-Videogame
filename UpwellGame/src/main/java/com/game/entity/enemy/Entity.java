@@ -6,17 +6,20 @@ public  abstract class Entity {
 
     // Entity Attributes
     private String name;
-    private int healthpoints;
+    private int cuurentHealthpoints;
+    private int maxHealthpoints;
     private int levelAddress;
     private Weapon weapon;
     protected int damageReduction = 0;
 
     // Entity Constructor
-    public Entity(String name, Weapon weapon, int levelAddress, int healthpoints) {
+    public Entity(String name, int damageReduction, Weapon weapon, int levelAddress, int maxHealthpoints, int cuurentHealthpoints) {
         this.name = name;
+        this.damageReduction = damageReduction;
         this.weapon = weapon;
         this.levelAddress = levelAddress;
-        this.healthpoints = healthpoints;
+        this.maxHealthpoints = maxHealthpoints;
+        this.cuurentHealthpoints = cuurentHealthpoints;
     }
 
     // Empty Entity Constructor
@@ -28,7 +31,7 @@ public  abstract class Entity {
     public String toString() {
         return "Entity{" +
                 "name='" + name + '\'' +
-                ", healthpoints=" + healthpoints +
+                ", healthpoints=" + cuurentHealthpoints +
                 ", levelAddress=" + levelAddress +
                 ", weapon=" + weapon +
                 '}';
@@ -36,14 +39,14 @@ public  abstract class Entity {
 
     // Action Methods
     public void takeDamage(int damage) {
-        this.healthpoints -= damage;
+        this.cuurentHealthpoints -= damage;
 
-        if (this.healthpoints < 0) {
-            this.healthpoints = 0;
+        if (this.cuurentHealthpoints < 0) {
+            this.cuurentHealthpoints = 0;
         }
     }
     public boolean isAlive() {
-        return this.healthpoints > 0;
+        return this.cuurentHealthpoints > 0;
     }
 
     // Getters and Setters
@@ -56,11 +59,11 @@ public  abstract class Entity {
         this.name = name;
     }
         // HP
-    public int getHealthpoints() {
-        return healthpoints;
+    public int getCuurentHealthpoints() {
+        return cuurentHealthpoints;
     }
-    public void setHealthpoints(int healthpoints) {
-        this.healthpoints = healthpoints;
+    public void setCuurentHealthpoints(int cuurentHealthpoints) {
+        this.cuurentHealthpoints = cuurentHealthpoints;
     }
 
         // Level Address

@@ -17,7 +17,7 @@ import com.game.ui.UserInterface;
  *  ✅ Fix repetition of starter weapon choice
  *  ✅ Make Battle more battle Ui more compact
  *  ✅ Make Attack Screen UI more compact
- *  -> Loop doesn't end fight when slime dies
+ *  ✅ Loop doesn't end fight when slime dies
  */
 
 public class Application {
