@@ -77,7 +77,7 @@ public class UserInterface {
             displayBattleHud(player, entity);
             playerTurn(player, entity);
             enemyTurn(player, entity);
-            checkDeath(player, entity, bothAlive);
+            checkDeath(player, entity);
 
         }
 
@@ -324,7 +324,8 @@ public class UserInterface {
 
         return 0;
     }
-    public  boolean checkDeath(Player player, Entity entity, boolean bothalive) {
+    public  boolean checkDeath(Player player, Entity entity) {
+        boolean bothalive;
 
         if (player.getHealthpoints() <= 0 || (entity.getHealthpoints() <= 0)) {
             bothalive = false;
@@ -368,7 +369,7 @@ public class UserInterface {
          entity.takeDamage(damage);
 
          // show damage
-         System.out.println(player.getName() + " dealt " + damage + "damage!");
+         System.out.println(player.getName() + " dealt " + damage + " damage!");
      }
     public void defendOption(Player player, Entity entity) {
         player.getWeapon().defend();
