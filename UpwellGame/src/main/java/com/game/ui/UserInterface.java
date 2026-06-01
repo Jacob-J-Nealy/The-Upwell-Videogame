@@ -326,7 +326,7 @@ public class UserInterface {
     }
     public  boolean checkDeath(Player player, Entity entity, boolean bothalive) {
 
-        if (player.getHealthpoints() <= 0) {
+        if (player.getHealthpoints() <= 0 || (entity.getHealthpoints() <= 0)) {
             bothalive = false;
         } else {
             bothalive = true;
