@@ -334,13 +334,15 @@ public class UserInterface {
     // displayBattleHud() helper methods
     public void attackScreen(Player player, Entity entity)  {
 
-         System.out.println("╔════════════════════════════════════════════════════════════╗");
-         System.out.println("║                       Attack Options                       ║");
-         System.out.println("╚════════════════════════════════════════════════════════════╝");
-         System.out.println("[1] Main  Attack");
-         System.out.println("[2] Heavy Attack");
-         System.out.println("[3] Special Attack");
-         System.out.println("[0] Return to Main Options");
+        System.out.println("""
+            ╔════════════════════════════════════════════════════════════╗
+            ║                      ATTACK OPTIONS                        ║
+            ║                     [1] Main Attack                        ║
+            ║                     [2] Heavy Attack                       ║
+            ║                    [3] Special Attack                      ║
+            ║                    [0] Return to Menu                      ║
+            ╚════════════════════════════════════════════════════════════╝
+            """);
 
          System.out.print("Choose Action ➜ ");
          int playerActionChoice = scanner.nextInt();
@@ -364,7 +366,10 @@ public class UserInterface {
          entity.takeDamage(damage);
 
          // show damage
-         System.out.println(player.getName() + " dealt " + damage + " damage!");
+        System.out.println("════════════════════════════════════════════════════════════");
+        System.out.println(player.getName() + " dealt " + damage + " damage!");
+        System.out.println(entity.getName() + " has " + entity.getHealthpoints() + " HP remaining.");
+        System.out.println("════════════════════════════════════════════════════════════");
      }
     public void defendOption(Player player, Entity entity) {
         player.getWeapon().defend();
