@@ -294,12 +294,11 @@ public class UserInterface {
         System.out.println("""
                 ╔════════════════════════════════════════════════════════════╗
                 ║                       YOUR OPTIONS                         ║
-                ║                        [1] Attack                          ║
-                ║                        [2] Defend                          ║
-                ║                       [3] Inventory                        ║
+                ║  [1] Attack            [2] Defend           [3] Inventory  ║
                 ╚════════════════════════════════════════════════════════════╝
+                Choose Action ➜
                 """);
-        System.out.print("Choose Action ➜ ");
+        System.out.print("");
     }
     public int playerTurn( Player player, Entity entity) {
 
