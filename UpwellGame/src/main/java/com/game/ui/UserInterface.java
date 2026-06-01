@@ -210,9 +210,6 @@ public class UserInterface {
         addColor("Suddenly, the scroll bursts into flames!", Colors.RED);
         waitForEnter();
 
-        addColor("The " + player.getWeapon() + " appears for you to Grab.", Colors.BRIGHT_WHITE);
-        waitForEnter();
-
         addColor("What...What is Happening Right Now?", Colors.BRIGHT_WHITE);
         waitForEnter();
 
@@ -337,7 +334,7 @@ public class UserInterface {
     }
 
     // displayBattleHud() helper methods
-     public void attackScreen(Player player, Entity entity) {
+     public void attackScreen(Player player, Entity entity)  {
 
          System.out.println("╔════════════════════════════════════════════════════════════╗");
          System.out.println("║                       Attack Options                       ║");
