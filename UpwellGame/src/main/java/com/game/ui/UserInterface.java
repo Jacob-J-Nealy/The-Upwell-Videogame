@@ -337,9 +337,7 @@ public class UserInterface {
         System.out.println("""
             ╔════════════════════════════════════════════════════════════╗
             ║                      ATTACK OPTIONS                        ║
-            ║                     [1] Main Attack                        ║
-            ║                     [2] Heavy Attack                       ║
-            ║                    [3] Special Attack                      ║
+            ║ [1] Main Attack    [2] Heavy Attack     [3] Special Attack ║
             ║                    [0] Return to Menu                      ║
             ╚════════════════════════════════════════════════════════════╝
             """);
