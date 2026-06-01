@@ -279,14 +279,10 @@ public class UserInterface {
         waitForEnter();
     }
     public void displayBattleHud(Player player, Entity entity) {
-
-
-
-        System.out.println("════════════════════════════════════════════════════════════");
         System.out.println("ENEMY: "    + entity.getName());
         System.out.println("ENEMY HP: " + entity.getHealthpoints());
         System.out.println("WEAPON: "   + entity.getWeapon());
-        System.out.println("════════════════════════════════════════════════════════════");
+        System.out.println("------------------------------------------------------------");
         System.out.println("PLAYER NAME: " + player.getName());
         System.out.println("YOUR HP: "     + player.getHealthpoints());
         System.out.println("WEAPON: "      + player.getWeapon());
@@ -295,10 +291,9 @@ public class UserInterface {
                 ╔════════════════════════════════════════════════════════════╗
                 ║                       YOUR OPTIONS                         ║
                 ║  [1] Attack            [2] Defend           [3] Inventory  ║
-                ╚════════════════════════════════════════════════════════════╝
-                Choose Action ➜
-                """);
-        System.out.print("");
+                ╚════════════════════════════════════════════════════════════╝""");
+        System.out.print("Choose Action ➜ ");
+
     }
     public int playerTurn( Player player, Entity entity) {
 
@@ -338,16 +333,17 @@ public class UserInterface {
             ║                      ATTACK OPTIONS                        ║
             ║ [1] Main Attack    [2] Heavy Attack     [3] Special Attack ║
             ║                    [0] Return to Menu                      ║
-            ╚════════════════════════════════════════════════════════════╝
-            """);
-
+            ╚════════════════════════════════════════════════════════════╝""");
          System.out.print("Choose Action ➜ ");
          int playerActionChoice = scanner.nextInt();
 
          int damage;
 
          switch (playerActionChoice) {
-             case 1 -> damage = player.getWeapon().mainAttack();
+             case 1 -> {
+                 damage = player.getWeapon().mainAttack();
+                 waitForEnter();
+             }
              case 2 -> damage = player.getWeapon().heavyAttack();
              case 3 -> damage = player.getWeapon().specialAttack();
              case 0 -> {
