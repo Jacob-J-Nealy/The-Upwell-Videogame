@@ -69,18 +69,24 @@ public class UserInterface {
     public void battleLoop(Player player, Entity entity) {
 
         battleIntroduction(entity);
-
         boolean bothAlive = true;
 
         while (bothAlive) {
 
             displayBattleHud(player, entity);
+
+            // Players Turn
             playerTurn(player, entity);
+            // checks if slime or player died
+            if (!bothAlive) {
+                break;
+            }
+
+            // Enemy's Turn
             enemyTurn(player, entity);
-            checkDeath(player, entity);
+            bothAlive = checkDeath(player, entity);
 
         }
-
     }
 
     // introduction() helper methods
@@ -340,10 +346,7 @@ public class UserInterface {
          int damage;
 
          switch (playerActionChoice) {
-             case 1 -> {
-                 damage = player.getWeapon().mainAttack();
-                 waitForEnter();
-             }
+             case 1 -> damage = player.getWeapon().mainAttack();
              case 2 -> damage = player.getWeapon().heavyAttack();
              case 3 -> damage = player.getWeapon().specialAttack();
              case 0 -> {
@@ -362,7 +365,10 @@ public class UserInterface {
         System.out.println("════════════════════════════════════════════════════════════");
         System.out.println(player.getName() + " dealt " + damage + " damage!");
         System.out.println(entity.getName() + " has " + entity.getHealthpoints() + " HP remaining.");
-        System.out.println("════════════════════════════════════════════════════════════");
+
+        scanner.nextLine(); // scanner eater
+        System.out.print("Press ENTER to continue FIGHT");
+        waitForEnter();
      }
     public void defendOption(Player player, Entity entity) {
         player.getWeapon().defend();
