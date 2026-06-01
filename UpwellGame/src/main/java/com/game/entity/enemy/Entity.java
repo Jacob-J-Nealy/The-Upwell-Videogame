@@ -58,7 +58,7 @@ public  abstract class Entity {
     public void setName(String name) {
         this.name = name;
     }
-        // HP
+        //  Current HP
     public int getCuurentHealthpoints() {
         return cuurentHealthpoints;
     }
@@ -66,7 +66,23 @@ public  abstract class Entity {
         this.cuurentHealthpoints = cuurentHealthpoints;
     }
 
-        // Level Address
+        // Max HP
+    public int getMaxHealthpoints() {
+        return maxHealthpoints;
+    }
+    public void setMaxHealthpoints(int maxHealthpoints) {
+        this.maxHealthpoints = maxHealthpoints;
+    }
+
+    public int getDamageReduction() {
+        return damageReduction;
+    }
+
+    public void setDamageReduction(int damageReduction) {
+        this.damageReduction = damageReduction;
+    }
+
+    // Level Address
     public int getLevelAddress() {
         return levelAddress;
     }
