@@ -322,31 +322,35 @@ public class UserInterface {
         int currentHealth = entity.getCurentHealthpoints();
         double healthPercentage = ((double) currentHealth / maxHealth);
 
-        String healthBar = "";
+        String healthBar;
 
         if (healthPercentage == 1.0) {
-            healthBar = "♥♥♥♥♥♥♥♥♥♥ [ " + currentHealth + " / " + maxHealth + " ]";
+            healthBar = "♥♥♥♥♥♥♥♥♥♥";
         } else if (healthPercentage >= 0.9) {
-            healthBar = "♥♥♥♥♥♥♥♥♥□ [ " + currentHealth + " / " + maxHealth + " ]";
+            healthBar = "♥♥♥♥♥♥♥♥♥□";
         } else if (healthPercentage >= 0.8) {
-            healthBar = " [ " + currentHealth + " / " + maxHealth + " ]";
+            healthBar = "♥♥♥♥♥♥♥♥□□";
         } else if (healthPercentage >= 0.7) {
-            healthBar = "♥♥♥♥♥♥♥□□□ [ " + currentHealth + " / " + maxHealth + " ]";
+            healthBar = "♥♥♥♥♥♥♥□□□";
         } else if (healthPercentage >= 0.6) {
-            healthBar = "♥♥♥♥♥♥□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
+            healthBar = "♥♥♥♥♥♥□□□□";
         } else if (healthPercentage >= 0.5) {
-            healthBar = "♥♥♥♥♥□□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
+            healthBar = "♥♥♥♥♥□□□□□";
         } else if (healthPercentage >= 0.4) {
-            healthBar = "♥♥♥♥□□□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
+            healthBar = "♥♥♥♥□□□□□□";
         } else if (healthPercentage >= 0.3) {
-            healthBar = "♥♥♥□□□□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
+            healthBar = "♥♥♥□□□□□□□";
         } else if (healthPercentage >= 0.2) {
-            healthBar = "♥♥□□□□□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
+            healthBar = "♥♥□□□□□□□□";
         } else if (healthPercentage >= 0.1) {
-            healthBar = "♥□□□□□□□□□ [ " + currentHealth + " / " + maxHealth;
+            healthBar = "♥□□□□□□□□□";
         } else {
-            healthBar = "□□□□□□□□□□" + currentHealth + " / " + maxHealth;
+            healthBar = "□□□□□□□□□□";
         }
+
+        // Adding Color Formatting
+        healthBar = Colors.RED + healthBar
+                + Colors.RESET + " [ " + currentHealth + " / " + maxHealth + " ]";
 
         return healthBar;
     }
@@ -398,11 +402,11 @@ public class UserInterface {
 
          // show damage
         System.out.println("════════════════════════════════════════════════════════════");
-        System.out.println(player.getName() + " dealt " + damage + " damage!");
+        System.out.println(player.getName() + " dealt " + Colors.RED + damage + " damage" + Colors.RESET + "!");
         System.out.println(entity.getName() + " has " + entity.getCurentHealthpoints() + " HP remaining.");
 
         scanner.nextLine(); // scanner eater
-        System.out.print("Press ENTER to continue FIGHT");
+        System.out.print("Press " + Colors.REVERSED + "ENTER" + Colors.RESET +" to continue FIGHT");
         waitForEnter();
      }
     public void defendOption(Player player, Entity entity) {
