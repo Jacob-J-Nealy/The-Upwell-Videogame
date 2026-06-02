@@ -6,7 +6,7 @@ public  abstract class Entity {
 
     // Entity Attributes
     private String name;
-    private int cuurentHealthpoints;
+    private int curentHealthpoints;
     private int maxHealthpoints;
     private int levelAddress;
     private Weapon weapon;
@@ -19,7 +19,7 @@ public  abstract class Entity {
         this.weapon = weapon;
         this.levelAddress = levelAddress;
         this.maxHealthpoints = maxHealthpoints;
-        this.cuurentHealthpoints = cuurentHealthpoints;
+        this.curentHealthpoints = cuurentHealthpoints;
     }
 
     // Empty Entity Constructor
@@ -31,7 +31,7 @@ public  abstract class Entity {
     public String toString() {
         return "Entity{" +
                 "name='" + name + '\'' +
-                ", healthpoints=" + cuurentHealthpoints +
+                ", healthpoints=" + curentHealthpoints +
                 ", levelAddress=" + levelAddress +
                 ", weapon=" + weapon +
                 '}';
@@ -39,14 +39,28 @@ public  abstract class Entity {
 
     // Action Methods
     public void takeDamage(int damage) {
-        this.cuurentHealthpoints -= damage;
+        this.curentHealthpoints -= damage;
 
-        if (this.cuurentHealthpoints < 0) {
-            this.cuurentHealthpoints = 0;
+        if (this.curentHealthpoints < 0) {
+            this.curentHealthpoints = 0;
         }
     }
     public boolean isAlive() {
-        return this.cuurentHealthpoints > 0;
+        return this.curentHealthpoints > 0;
+    }
+    public String makeHealthBar(Entity entity) {
+
+        int maxHealth = entity.getMaxHealthpoints();
+        int currentaHealth = entity.getCurentHealthpoints();
+        String healthBar ="null";
+
+        switch (currentaHealth = maxHealth) {
+            case 1 -> {
+
+            }
+
+        }
+        return healthBar;
     }
 
     // Getters and Setters
@@ -59,11 +73,11 @@ public  abstract class Entity {
         this.name = name;
     }
         //  Current HP
-    public int getCuurentHealthpoints() {
-        return cuurentHealthpoints;
+    public int getCurentHealthpoints() {
+        return curentHealthpoints;
     }
-    public void setCuurentHealthpoints(int cuurentHealthpoints) {
-        this.cuurentHealthpoints = cuurentHealthpoints;
+    public void setCurentHealthpoints(int curentHealthpoints) {
+        this.curentHealthpoints = curentHealthpoints;
     }
 
         // Max HP

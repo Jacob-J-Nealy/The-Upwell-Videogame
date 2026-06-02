@@ -286,11 +286,11 @@ public class UserInterface {
     }
     public void displayBattleHud(Player player, Entity entity) {
         System.out.println("ENEMY: "    + entity.getName());
-        System.out.println("ENEMY HP: " + entity.getCuurentHealthpoints());
+        System.out.println("ENEMY HP: " + entity.getCurentHealthpoints());
         System.out.println("WEAPON: "   + entity.getWeapon());
         System.out.println("------------------------------------------------------------");
         System.out.println("PLAYER NAME: " + player.getName());
-        System.out.println("YOUR HP: "     + player.getCuurentHealthpoints());
+        System.out.println("YOUR HP: "     + player.getCurentHealthpoints());
         System.out.println("WEAPON: "      + player.getWeapon());
 
         System.out.println("""
@@ -322,7 +322,7 @@ public class UserInterface {
     public  boolean checkDeath(Player player, Entity entity) {
         boolean bothalive;
 
-        if (player.getCuurentHealthpoints() <= 0 || (entity.getCuurentHealthpoints() <= 0)) {
+        if (player.getCurentHealthpoints() <= 0 || (entity.getCurentHealthpoints() <= 0)) {
             bothalive = false;
         } else {
             bothalive = true;
@@ -364,7 +364,7 @@ public class UserInterface {
          // show damage
         System.out.println("════════════════════════════════════════════════════════════");
         System.out.println(player.getName() + " dealt " + damage + " damage!");
-        System.out.println(entity.getName() + " has " + entity.getCuurentHealthpoints() + " HP remaining.");
+        System.out.println(entity.getName() + " has " + entity.getCurentHealthpoints() + " HP remaining.");
 
         scanner.nextLine(); // scanner eater
         System.out.print("Press ENTER to continue FIGHT");
