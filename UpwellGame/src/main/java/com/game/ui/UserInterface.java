@@ -285,13 +285,13 @@ public class UserInterface {
         waitForEnter();
     }
     public void displayBattleHud(Player player, Entity entity) {
-        String hpBar = entity.makeHealthBar(entity);
+        String hpBar = makeHealthBar(entity);
         System.out.println("ENEMY: "    + entity.getName());
-        System.out.println("ENEMY HP: " + entity.makeHealthBar(entity));
+        System.out.println("ENEMY HP: " + makeHealthBar(entity));
         System.out.println("WEAPON: "   + entity.getWeapon());
         System.out.println("------------------------------------------------------------");
         System.out.println("PLAYER NAME: " + player.getName());
-        System.out.println("YOUR HP:  "    + player.makeHealthBar(player));
+        System.out.println("YOUR HP:  "    + makeHealthBar(player));
         System.out.println("WEAPON: "      + player.getWeapon());
 
         System.out.println("""
@@ -315,6 +315,40 @@ public class UserInterface {
         }
 
         return playerMainChoice;
+    }
+    public String makeHealthBar(Entity entity) {
+
+        int maxHealth = entity.getMaxHealthpoints();
+        int currentHealth = entity.getCurentHealthpoints();
+        double healthPercentage = ((double) currentHealth / maxHealth);
+
+        String healthBar = "";
+
+        if (healthPercentage == 1.0) {
+            healthBar = "♥♥♥♥♥♥♥♥♥♥ [ " + currentHealth + " / " + maxHealth + " ]";
+        } else if (healthPercentage >= 0.9) {
+            healthBar = "♥♥♥♥♥♥♥♥♥□ [ " + currentHealth + " / " + maxHealth + " ]";
+        } else if (healthPercentage >= 0.8) {
+            healthBar = " [ " + currentHealth + " / " + maxHealth + " ]";
+        } else if (healthPercentage >= 0.7) {
+            healthBar = "♥♥♥♥♥♥♥□□□ [ " + currentHealth + " / " + maxHealth + " ]";
+        } else if (healthPercentage >= 0.6) {
+            healthBar = "♥♥♥♥♥♥□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
+        } else if (healthPercentage >= 0.5) {
+            healthBar = "♥♥♥♥♥□□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
+        } else if (healthPercentage >= 0.4) {
+            healthBar = "♥♥♥♥□□□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
+        } else if (healthPercentage >= 0.3) {
+            healthBar = "♥♥♥□□□□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
+        } else if (healthPercentage >= 0.2) {
+            healthBar = "♥♥□□□□□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
+        } else if (healthPercentage >= 0.1) {
+            healthBar = "♥□□□□□□□□□ [ " + currentHealth + " / " + maxHealth;
+        } else {
+            healthBar = "□□□□□□□□□□" + currentHealth + " / " + maxHealth;
+        }
+
+        return healthBar;
     }
     public int enemyTurn(Player player, Entity entity) {
 

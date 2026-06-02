@@ -47,40 +47,6 @@ public  abstract class Entity {
     public boolean isAlive() {
         return this.curentHealthpoints > 0;
     }
-    public String makeHealthBar(Entity entity) {
-
-        int maxHealth = entity.getMaxHealthpoints();
-        int currentHealth = entity.getCurentHealthpoints();
-        double healthPercentage = ((double) currentHealth / maxHealth);
-
-        String healthBar = "";
-
-        if (healthPercentage == 1.0) {
-            healthBar = "♥♥♥♥♥♥♥♥♥♥ [ " + currentHealth + " / " + maxHealth + " ]";
-        } else if (healthPercentage >= 0.9) {
-            healthBar = "♥♥♥♥♥♥♥♥♥□ [ " + currentHealth + " / " + maxHealth + " ]";
-        } else if (healthPercentage >= 0.8) {
-            healthBar = " [ " + currentHealth + " / " + maxHealth + " ]";
-        } else if (healthPercentage >= 0.7) {
-            healthBar = "♥♥♥♥♥♥♥□□□ [ " + currentHealth + " / " + maxHealth + " ]";
-        } else if (healthPercentage >= 0.6) {
-            healthBar = "♥♥♥♥♥♥□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
-        } else if (healthPercentage >= 0.5) {
-            healthBar = "♥♥♥♥♥□□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
-        } else if (healthPercentage >= 0.4) {
-            healthBar = "♥♥♥♥□□□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
-        } else if (healthPercentage >= 0.3) {
-            healthBar = "♥♥♥□□□□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
-        } else if (healthPercentage >= 0.2) {
-            healthBar = "♥♥□□□□□□□□ [ " + currentHealth + " / " + maxHealth + " ]";
-        } else if (healthPercentage >= 0.1) {
-            healthBar = "♥□□□□□□□□□ [ " + currentHealth + " / " + maxHealth;
-        } else {
-            healthBar = "□□□□□□□□□□" + currentHealth + " / " + maxHealth;
-        }
-
-        return healthBar;
-    }
 
     // Getters and Setters
 
