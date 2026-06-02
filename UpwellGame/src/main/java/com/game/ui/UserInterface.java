@@ -286,7 +286,7 @@ public class UserInterface {
     }
     public void displayBattleHud(Player player, Entity entity) {
         System.out.println("ENEMY: "    + entity.getName());
-        System.out.println("ENEMY HP: " + entity.getCurentHealthpoints());
+        System.out.println("ENEMY HP: " + entity.makeHealthBar(entity);
         System.out.println("WEAPON: "   + entity.getWeapon());
         System.out.println("------------------------------------------------------------");
         System.out.println("PLAYER NAME: " + player.getName());

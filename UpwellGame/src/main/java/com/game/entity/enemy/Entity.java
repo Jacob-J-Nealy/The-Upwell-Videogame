@@ -8,6 +8,7 @@ public  abstract class Entity {
     private String name;
     private int curentHealthpoints;
     private int maxHealthpoints;
+    private String hpBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩";
     private int levelAddress;
     private Weapon weapon;
     protected int damageReduction = 0;
@@ -20,6 +21,16 @@ public  abstract class Entity {
         this.levelAddress = levelAddress;
         this.maxHealthpoints = maxHealthpoints;
         this.curentHealthpoints = cuurentHealthpoints;
+    }
+
+    public Entity(String name, int damageReduction, Weapon weapon, int levelAddress, String hpBar, int maxHealthpoints, int curentHealthpoints) {
+        this.name = name;
+        this.damageReduction = damageReduction;
+        this.weapon = weapon;
+        this.levelAddress = levelAddress;
+        this.hpBar = hpBar;
+        this.maxHealthpoints = maxHealthpoints;
+        this.curentHealthpoints = curentHealthpoints;
     }
 
     // Empty Entity Constructor
@@ -45,27 +56,44 @@ public  abstract class Entity {
             this.curentHealthpoints = 0;
         }
     }
+
     public boolean isAlive() {
         return this.curentHealthpoints > 0;
     }
+
     public String makeHealthBar(Entity entity) {
 
         int maxHealth = entity.getMaxHealthpoints();
         int currentHealth = entity.getCurentHealthpoints();
         double healthPercentage = (currentHealth / maxHealth);
+        String healthBar = "";
 
-        if (healthPercentage == 1.0)  {
-
+        if (healthPercentage == 1.0) {
+            healthBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩";
         } else if (healthPercentage >= 0.9) {
-            
+            healthBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟥 " + currentHealth + " / " + maxHealth;
         } else if (healthPercentage >= 0.8) {
-            
-        } else if () {
-            
+            healthBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟥🟥" + currentHealth + " / " + maxHealth;
+        } else if (healthPercentage >= 0.7) {
+            healthBar = "🟩🟩🟩🟩🟩🟩🟩🟥🟥🟥" + currentHealth + " / " + maxHealth;
+        } else if (healthPercentage >= 0.6) {
+            healthBar = "🟩🟩🟩🟩🟩🟩🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
+        } else if (healthPercentage >= 0.5) {
+            healthBar = "🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
+        } else if (healthPercentage >= 0.4) {
+            healthBar = "🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
+        } else if (healthPercentage >= 0.3) {
+            healthBar = "🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
+        } else if (healthPercentage >= 0.2) {
+            healthBar = "🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
+        } else if (healthPercentage >= 0.1) {
+            healthBar = "🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
+        } else if (healthPercentage <= 0){
+            healthBar = "🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
         }
 
 
-        return "0";
+        return healthBar;
     }
 
     // Getters and Setters
@@ -93,7 +121,15 @@ public  abstract class Entity {
         this.maxHealthpoints = maxHealthpoints;
     }
 
-        // Damage Reduction
+        // HP Bar
+    public String getHpBar() {
+        return hpBar;
+    }
+    public void setHpBar(String hpBar) {
+        this.hpBar = hpBar;
+    }
+
+    // Damage Reduction
     public int getDamageReduction() {
         return damageReduction;
     }
