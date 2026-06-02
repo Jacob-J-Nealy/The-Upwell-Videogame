@@ -66,10 +66,10 @@ public  abstract class Entity {
         int maxHealth = entity.getMaxHealthpoints();
         int currentHealth = entity.getCurentHealthpoints();
         double healthPercentage = (currentHealth / maxHealth);
-        String healthBar = "";
+        String healthBar = getHpBar();
 
         if (healthPercentage == 1.0) {
-            healthBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩";
+            healthBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩" + currentHealth + " / " + maxHealth;
         } else if (healthPercentage >= 0.9) {
             healthBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟥 " + currentHealth + " / " + maxHealth;
         } else if (healthPercentage >= 0.8) {
@@ -92,7 +92,7 @@ public  abstract class Entity {
             healthBar = "🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
         }
 
-
+        setHpBar(healthBar);
         return healthBar;
     }
 
