@@ -45,11 +45,9 @@ public  abstract class Entity {
             this.curentHealthpoints = 0;
         }
     }
-
     public boolean isAlive() {
         return this.curentHealthpoints > 0;
     }
-
     public String makeHealthBar(Entity entity) {
 
         int maxHealth = entity.getMaxHealthpoints();
