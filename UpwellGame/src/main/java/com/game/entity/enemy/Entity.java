@@ -8,7 +8,7 @@ public  abstract class Entity {
     private String name;
     private int curentHealthpoints;
     private int maxHealthpoints;
-    private String hpBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩";
+    private String hpBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 " + getCurentHealthpoints() + "/" + getMaxHealthpoints();
     private int levelAddress;
     private Weapon weapon;
     protected int damageReduction = 0;
@@ -65,7 +65,7 @@ public  abstract class Entity {
 
         int maxHealth = entity.getMaxHealthpoints();
         int currentHealth = entity.getCurentHealthpoints();
-        double healthPercentage = (currentHealth / maxHealth);
+        double healthPercentage = ((double) currentHealth / maxHealth);
         String healthBar = getHpBar();
 
         if (healthPercentage == 1.0) {
