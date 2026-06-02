@@ -8,29 +8,18 @@ public  abstract class Entity {
     private String name;
     private int curentHealthpoints;
     private int maxHealthpoints;
-    private String hpBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 " + getCurentHealthpoints() + "/" + getMaxHealthpoints();
+    // private String hpBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 " + getCurentHealthpoints() + "/" + getMaxHealthpoints();
     private int levelAddress;
     private Weapon weapon;
     protected int damageReduction = 0;
 
-    // Entity Constructor
-    public Entity(String name, int damageReduction, Weapon weapon, int levelAddress, int maxHealthpoints, int cuurentHealthpoints) {
+    public Entity(String name, int curentHealthpoints, int maxHealthpoints, int levelAddress, Weapon weapon, int damageReduction) {
         this.name = name;
-        this.damageReduction = damageReduction;
-        this.weapon = weapon;
-        this.levelAddress = levelAddress;
-        this.maxHealthpoints = maxHealthpoints;
-        this.curentHealthpoints = cuurentHealthpoints;
-    }
-
-    public Entity(String name, int damageReduction, Weapon weapon, int levelAddress, String hpBar, int maxHealthpoints, int curentHealthpoints) {
-        this.name = name;
-        this.damageReduction = damageReduction;
-        this.weapon = weapon;
-        this.levelAddress = levelAddress;
-        this.hpBar = hpBar;
-        this.maxHealthpoints = maxHealthpoints;
         this.curentHealthpoints = curentHealthpoints;
+        this.maxHealthpoints = maxHealthpoints;
+        this.levelAddress = levelAddress;
+        this.weapon = weapon;
+        this.damageReduction = damageReduction;
     }
 
     // Empty Entity Constructor
@@ -66,7 +55,7 @@ public  abstract class Entity {
         int maxHealth = entity.getMaxHealthpoints();
         int currentHealth = entity.getCurentHealthpoints();
         double healthPercentage = ((double) currentHealth / maxHealth);
-        String healthBar = getHpBar();
+        String healthBar;
 
         if (healthPercentage == 1.0) {
             healthBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩" + currentHealth + " / " + maxHealth;
@@ -119,14 +108,6 @@ public  abstract class Entity {
     }
     public void setMaxHealthpoints(int maxHealthpoints) {
         this.maxHealthpoints = maxHealthpoints;
-    }
-
-        // HP Bar
-    public String getHpBar() {
-        return hpBar;
-    }
-    public void setHpBar(String hpBar) {
-        this.hpBar = hpBar;
     }
 
     // Damage Reduction
