@@ -13,6 +13,8 @@ import com.game.ui.UserInterface;
  *  -> Add attack messages of weapons
  *  -> Add damage logic for other weapons
  *  -> Build Slime AI
+ *  6.2
+ *  🚧 Battle Loop ends for some reason after first attack
  *  6.1
  *  -> Add Colors for Enemies, Players and Attacks
  *  5.31
