@@ -51,16 +51,21 @@ public  abstract class Entity {
     public String makeHealthBar(Entity entity) {
 
         int maxHealth = entity.getMaxHealthpoints();
-        int currentaHealth = entity.getCurentHealthpoints();
-        String healthBar ="null";
+        int currentHealth = entity.getCurentHealthpoints();
+        double healthPercentage = (currentHealth / maxHealth);
 
-        switch (currentaHealth = maxHealth) {
-            case 1 -> {
+        if (healthPercentage == 1.0)  {
 
-            }
-
+        } else if (healthPercentage >= 0.9) {
+            
+        } else if (healthPercentage >= 0.8) {
+            
+        } else if () {
+            
         }
-        return healthBar;
+
+
+        return "0";
     }
 
     // Getters and Setters
