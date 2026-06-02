@@ -11,21 +11,11 @@ public class Player extends Entity {
     private List<Item> inventory;
 
     // Player Constructor
-
-
-    public Player(String name, Weapon weapon, int levelAddress, int healthpoints, List<Item> inventory) {
-        super(name, weapon, levelAddress, healthpoints);
+    public Player(String name, int damageReduction, Weapon weapon, int levelAddress, String hpBar, int maxHealthpoints, int curentHealthpoints, List<Item> inventory) {
+        super(name, damageReduction, weapon, levelAddress, hpBar, maxHealthpoints, curentHealthpoints);
         this.inventory = inventory;
     }
 
-    public Player() {
-        super("what is my name again?", null, 1, 100);
-    }
-
-    // Player Constructor (Empty)
-    public Player(String name, Weapon weapon, int levelAddress, int healthpoints) {
-        super(name, weapon, levelAddress, healthpoints);
-    }
 
 
     // Getters and Setters
