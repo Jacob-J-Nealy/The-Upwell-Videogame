@@ -8,7 +8,6 @@ public  abstract class Entity {
     private String name;
     private int curentHealthpoints;
     private int maxHealthpoints;
-    // private String hpBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 " + getCurentHealthpoints() + "/" + getMaxHealthpoints();
     private int levelAddress;
     private Weapon weapon;
     protected int damageReduction = 0;
@@ -57,26 +56,26 @@ public  abstract class Entity {
         String healthBar = "";
 
         if (healthPercentage == 1.0) {
-            healthBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩" + currentHealth + " / " + maxHealth;
+            healthBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 [ " + currentHealth + " / " + maxHealth + " ]";
         } else if (healthPercentage >= 0.9) {
-            healthBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟥 " + currentHealth + " / " + maxHealth;
+            healthBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟩🟥 [ " + currentHealth + " / " + maxHealth + " ]";
         } else if (healthPercentage >= 0.8) {
-            healthBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟥🟥" + currentHealth + " / " + maxHealth;
+            healthBar = "🟩🟩🟩🟩🟩🟩🟩🟩🟥🟥 [ " + currentHealth + " / " + maxHealth + " ]";
         } else if (healthPercentage >= 0.7) {
-            healthBar = "🟩🟩🟩🟩🟩🟩🟩🟥🟥🟥" + currentHealth + " / " + maxHealth;
+            healthBar = "🟩🟩🟩🟩🟩🟩🟩🟥🟥🟥 [ " + currentHealth + " / " + maxHealth + " ]";
         } else if (healthPercentage >= 0.6) {
-            healthBar = "🟩🟩🟩🟩🟩🟩🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
+            healthBar = "🟩🟩🟩🟩🟩🟩🟥🟥🟥🟥 [ " + currentHealth + " / " + maxHealth + " ]";
         } else if (healthPercentage >= 0.5) {
-            healthBar = "🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
+            healthBar = "🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥 [ " + currentHealth + " / " + maxHealth + " ]";
         } else if (healthPercentage >= 0.4) {
-            healthBar = "🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
+            healthBar = "🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥 [ " + currentHealth + " / " + maxHealth + " ]";
         } else if (healthPercentage >= 0.3) {
-            healthBar = "🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
+            healthBar = "🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥 [ " + currentHealth + " / " + maxHealth + " ]";
         } else if (healthPercentage >= 0.2) {
-            healthBar = "🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
+            healthBar = "🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥 [ " + currentHealth + " / " + maxHealth + " ]";
         } else if (healthPercentage >= 0.1) {
             healthBar = "🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
-        } else if (healthPercentage <= 0){
+        } else {
             healthBar = "🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥" + currentHealth + " / " + maxHealth;
         }
 
