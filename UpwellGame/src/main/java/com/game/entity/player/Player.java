@@ -16,6 +16,8 @@ public class Player extends Entity {
         this.inventory = inventory;
     }
 
+    public Player() {
+    }
 
 
     // Getters and Setters
