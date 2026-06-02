@@ -291,7 +291,7 @@ public class UserInterface {
         System.out.println("WEAPON: "   + entity.getWeapon());
         System.out.println("------------------------------------------------------------");
         System.out.println("PLAYER NAME: " + player.getName());
-        System.out.println("YOUR HP: "     + hpBar);
+        System.out.println("YOUR HP:  "    + player.makeHealthBar(player));
         System.out.println("WEAPON: "      + player.getWeapon());
 
         System.out.println("""

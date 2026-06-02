@@ -15,6 +15,7 @@ import com.game.ui.UserInterface;
  *  -> Build Slime AI
  *  6.2
  *  🚧 Battle Loop ends for some reason after first attack
+ *  🚧 Player has 25 HP? Should be 100
  *  6.1
  *  -> Add Colors for Enemies, Players and Attacks
  *  5.31
