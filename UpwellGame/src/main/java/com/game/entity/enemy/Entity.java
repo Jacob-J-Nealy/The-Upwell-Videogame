@@ -74,10 +74,10 @@ public  abstract class Entity {
         this.maxHealthpoints = maxHealthpoints;
     }
 
+        // Damage Reduction
     public int getDamageReduction() {
         return damageReduction;
     }
-
     public void setDamageReduction(int damageReduction) {
         this.damageReduction = damageReduction;
     }

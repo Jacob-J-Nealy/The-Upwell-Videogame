@@ -8,11 +8,13 @@ import com.game.ui.Colors;
 import com.game.ui.UserInterface;
 
 /** What's Next 05.30.26
- *  -> Turn battleLoop() Method into an actual loop with checking of death status
- *  -> Add HP Bars for Player and Enemies
+ *  ✅ Turn battleLoop() Method into an actual loop with checking of death status
+ *  🚧 Add HP Bars for Player and Enemies
  *  -> Add attack messages of weapons
  *  -> Add damage logic for other weapons
  *  -> Build Slime AI
+ *  6.1
+ *  -> Add Colors for Enemies, Players and Attacks
  *  5.31
  *  ✅ Fix repetition of starter weapon choice
  *  ✅ Make Battle more battle Ui more compact
