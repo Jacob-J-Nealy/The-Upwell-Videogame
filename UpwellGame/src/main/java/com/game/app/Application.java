@@ -14,10 +14,11 @@ import com.game.ui.UserInterface;
  *  -> Add damage logic for other weapons
  *  -> Build Slime AI
  *  6.2
+ *
  *  ✅ Battle Loop ends for some reason after first attack
  *  ✅ Player has 25 HP? Should be 100
  *  6.1
- *  -> Add Colors for Enemies, Players and Attacks
+ *  ✅ Add Colors for Enemies, Players and Attacks
  *  5.31
  *  ✅ Fix repetition of starter weapon choice
  *  ✅ Make Battle more battle Ui more compact

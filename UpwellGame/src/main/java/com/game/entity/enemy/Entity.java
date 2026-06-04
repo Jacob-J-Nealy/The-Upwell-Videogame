@@ -26,7 +26,6 @@ public  abstract class Entity {
     }
 
     // Entity toString
-    @Override
     public String toString() {
         return "Entity{" +
                 "name='" + name + '\'' +
