@@ -73,11 +73,14 @@ public class Sword extends Weapon {
          *      -> If hits, deals 5 damage and stuns enemy
          */
 
-        double stunChance = Math.random();
+        double chance = Math.random();
+        int hit = 5;
 
-        if (stunChance >= 0.5) {
+        if (chance >= 0.5) {
             return 0;
-        } else return 5;
+        } else {
+            return hit;
+        }
     }
     @Override
     public int defend() {
