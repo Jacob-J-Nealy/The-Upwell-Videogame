@@ -388,7 +388,11 @@ public class UserInterface {
          switch (playerActionChoice) {
              case 1 -> damage = player.getWeapon().mainAttack();
              case 2 -> damage = player.getWeapon().heavyAttack();
-             case 3 -> damage = player.getWeapon().specialAttack();
+             case 3 -> {
+                 damage = player.getWeapon().specialAttack();
+                 if (damage > 0 && player.getWeapon() instanceof Sword);
+                 entity.setStunned(true);
+             }
              case 0 -> {
                  return;
              }
