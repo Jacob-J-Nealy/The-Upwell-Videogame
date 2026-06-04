@@ -287,7 +287,6 @@ public class UserInterface {
         waitForEnter();
     }
     public void displayBattleHud(Player player, Entity entity) {
-        String hpBar = makeHealthBar(entity);
         System.out.println("ENEMY: "    + entity.getName());
         System.out.println("ENEMY HP: " + makeHealthBar(entity));
         System.out.println("WEAPON: "   + entity.getWeapon());
