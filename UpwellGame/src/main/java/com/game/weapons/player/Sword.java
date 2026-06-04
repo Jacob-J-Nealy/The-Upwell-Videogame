@@ -75,6 +75,11 @@ public class Sword extends Weapon {
 
         double stunChance = Math.random();
 
+        if (stunChance >= 0.5) {
+
+        }
+
+
         return 0;
     }
     @Override

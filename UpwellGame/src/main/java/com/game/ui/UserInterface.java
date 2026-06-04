@@ -77,6 +77,8 @@ public class UserInterface {
 
             // Players Turn
             playerTurn(player, entity);
+            bothAlive = checkDeath(player, entity);
+
             // checks if slime or player died
             if (!bothAlive) {
                 break;
