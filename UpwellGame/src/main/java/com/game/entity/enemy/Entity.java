@@ -11,10 +11,15 @@ public  abstract class Entity {
     private int levelAddress;
     private Weapon weapon;
     protected int damageReduction = 0;
+    // Enemy Status Attributes
+    private boolean stunned;
+    private boolean poisoned;
+    private boolean bleeding;
+    private boolean ugly;
 
-    public Entity(String name, int curentHealthpoints, int maxHealthpoints, int levelAddress, Weapon weapon, int damageReduction) {
+    public Entity(String name, int currentHealthpoints, int maxHealthpoints, int levelAddress, Weapon weapon, int damageReduction) {
         this.name = name;
-        this.curentHealthpoints = curentHealthpoints;
+        this.curentHealthpoints = currentHealthpoints;
         this.maxHealthpoints = maxHealthpoints;
         this.levelAddress = levelAddress;
         this.weapon = weapon;
@@ -94,5 +99,13 @@ public  abstract class Entity {
     }
     public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
+    }
+
+        // Stunned
+    public boolean isStunned() {
+        return stunned;
+    }
+    public void setStunned(boolean stunned) {
+        this.stunned = stunned;
     }
 }
