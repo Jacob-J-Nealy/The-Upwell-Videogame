@@ -76,19 +76,18 @@ public class Bow extends Weapon {
          *      -> takes two turns to come down and hit the enemy for guaranteed extremely high damage
          *      -> 30% chance of hitting
          *      -> 70% chance of missing and doing no damage
-         *      (All Damage variates +4 and -4 of base value)
          */
 
         if (shotArrow) {
-            turnsTillImpact = (turnsTillImpact - 1);
-
+            turnsTillImpact--;
         } else {
             shotArrow = true;
         }
 
         if (turnsTillImpact <= 0) {
-
+            int chance = (int) Math.random();
             shotArrow = false;
+            turnsTillImpact = 2;
             return 50;
         }
 
