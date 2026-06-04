@@ -84,11 +84,14 @@ public class Bow extends Weapon {
             shotArrow = true;
         }
 
-        if (turnsTillImpact <= 0) {
-            int chance = (int) Math.random();
+        if (turnsTillImpact == 0) {
+            double chance = Math.random();
             shotArrow = false;
             turnsTillImpact = 2;
-            return 50;
+
+            while (chance >= 0.5) {
+                return 50;
+            }
         }
 
         return 0;

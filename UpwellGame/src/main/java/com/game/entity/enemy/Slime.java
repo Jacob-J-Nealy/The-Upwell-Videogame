@@ -8,6 +8,6 @@ public class Slime extends Entity {
 
     // Slime Constructor
     public Slime() {
-        super("GREEN SLIME", 25, 25, 1, new Acid(8,2), 25);
+        super("GREEN SLIME", 10000, 25, 1, new Acid(8,2), 25);
     }
 }
