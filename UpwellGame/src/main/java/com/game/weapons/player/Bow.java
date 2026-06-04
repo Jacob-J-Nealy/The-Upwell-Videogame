@@ -10,7 +10,8 @@ public class Bow extends Weapon {
     }
 
     // Attributes
-    private boolean shotArrow;
+    private boolean shotArrow = false;
+    private int turnsTillImpact = 2;
 
     // toString
     @Override
@@ -78,16 +79,16 @@ public class Bow extends Weapon {
          *      (All Damage variates +4 and -4 of base value)
          */
 
-        int stillComingDown = 0;
+        if (shotArrow) {
+            turnsTillImpact = (turnsTillImpact - 1);
 
-        if (!shotArrow) {
-            shotArrow = true;
-            return 0;
         } else {
-            stillComingDown++;
+            shotArrow = true;
         }
 
-        if (stillComingDown == 2) {
+        if (turnsTillImpact <= 0) {
+
+            shotArrow = false;
             return 50;
         }
 
