@@ -386,10 +386,20 @@ public class UserInterface {
          int damage;
 
          switch (playerActionChoice) {
-             case 1 -> damage = player.getWeapon().mainAttack();
-             case 2 -> damage = player.getWeapon().heavyAttack();
+             case 1 -> {
+                 damage = player.getWeapon().mainAttack();
+                 System.out.println("You chose " + Colors.BLUE + "Main Attack" + Colors.RESET);
+                 waitForEnter();
+             }
+             case 2 -> {
+                 damage = player.getWeapon().heavyAttack();
+                 System.out.println("You chose " + Colors.YELLOW + "Heavy Attack" + Colors.RESET);
+                 waitForEnter();
+             }
              case 3 -> {
                  damage = player.getWeapon().specialAttack();
+                 System.out.println("You chose " + Colors.PURPLE + "Main Attack" + Colors.RESET);
+                 waitForEnter();
 
                  // Sword Special: stuns enemy
                  if (damage > 0 && player.getWeapon() instanceof Sword);

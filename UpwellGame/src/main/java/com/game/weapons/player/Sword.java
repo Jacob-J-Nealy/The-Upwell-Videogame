@@ -29,15 +29,12 @@ public class Sword extends Weapon {
 
         double chance = Math.random();
         if (chance <= 0.05) {
-            System.out.println("You chose " + Colors.BLUE + "Main Attack" + Colors.RESET);
             return 0; // missed
         }
         else if (chance > 0.05 && chance <= 0.30) {
-            System.out.println("You chose " + Colors.BLUE + "Main Attack" + Colors.RESET);
             return applyVariance((int)(getAttackPower() * 0.7), 5); // low damage
         }
         else {
-            System.out.println("You chose " + Colors.BLUE + "Main Attack" + Colors.RESET);
             return applyVariance(getAttackPower(),5); // average damage
         }
     }
