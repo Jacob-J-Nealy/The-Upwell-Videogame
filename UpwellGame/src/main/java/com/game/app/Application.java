@@ -11,7 +11,7 @@ import com.game.ui.UserInterface;
  *  ✅ Turn battleLoop() Method into an actual loop with checking of death status
  *  ✅ Add HP Bars Functionality for Player and Enemies
  *  -> Add attack messages of weapons
- *  -> Add damage logic for other weapons
+ *  ✅ Add damage logic for other weapons
  *  -> Build Slime AI
  *  6.2
  *  ✅ Battle Loop ends for some reason after first attack
