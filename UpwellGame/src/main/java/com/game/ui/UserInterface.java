@@ -385,25 +385,27 @@ public class UserInterface {
 
          int damage;
 
+        scanner.nextLine(); // scanner eater
          switch (playerActionChoice) {
              case 1 -> {
                  damage = player.getWeapon().mainAttack();
-                 System.out.println("You chose " + Colors.BLUE + "Main Attack" + Colors.RESET);
+                 System.out.print("You chose " + Colors.REVERSED + "Main Attack" + Colors.RESET);
                  waitForEnter();
              }
              case 2 -> {
                  damage = player.getWeapon().heavyAttack();
-                 System.out.println("You chose " + Colors.YELLOW + "Heavy Attack" + Colors.RESET);
+                 System.out.print("You chose " + Colors.REVERSED + "Heavy Attack" + Colors.RESET);
                  waitForEnter();
              }
              case 3 -> {
                  damage = player.getWeapon().specialAttack();
-                 System.out.println("You chose " + Colors.PURPLE + "Main Attack" + Colors.RESET);
-                 waitForEnter();
+                 System.out.print("You chose " + Colors.REVERSED + "Special Attack" + Colors.RESET);
 
                  // Sword Special: stuns enemy
-                 if (damage > 0 && player.getWeapon() instanceof Sword);
-                 entity.setStunned(true);
+                 if (damage > 0 && player.getWeapon() instanceof Sword) {
+                     entity.setStunned(true);
+                 }
+                 waitForEnter();
              }
              case 0 -> {
                  return;
@@ -421,9 +423,7 @@ public class UserInterface {
         System.out.println("════════════════════════════════════════════════════════════");
         System.out.println(player.getName() + " dealt " + Colors.RED + damage + " damage" + Colors.RESET + "!");
         System.out.println(entity.getName() + " has " + entity.getCurentHealthpoints() + " HP remaining.");
-
-        scanner.nextLine(); // scanner eater
-        System.out.print("Press " + Colors.REVERSED + "ENTER" + Colors.RESET +" to continue FIGHT");
+        System.out.println("Press " + Colors.REVERSED + "ENTER" + Colors.RESET +" to continue FIGHT");
         waitForEnter();
      }
     public void defendOption(Player player, Entity entity) {
